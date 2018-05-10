@@ -9,5 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @interface DownloadHelper : NSObject
-- (void)downloadFileWithURL:(NSString *)videlUrl;
++ (void)downloadFileWithURL:(NSString *)videlUrl;
 @end

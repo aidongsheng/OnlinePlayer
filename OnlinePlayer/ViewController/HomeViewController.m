@@ -7,16 +7,23 @@
 //
 
 #import "HomeViewController.h"
+#import "OnlineVideoPlayer.h"
 
-@interface HomeViewController ()
+@interface HomeViewController ()<OnlineVideoPlayerDelegate>
 
 @end
+
+#define videoURL @"http://192.168.2.102:8000/download/bilibili.mp4"
 
 @implementation HomeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    OnlineVideoPlayer *playerView =[[ OnlineVideoPlayer alloc]initWithVideoUrl:videoURL delegate:self];
+    playerView.frame = [UIScreen mainScreen].bounds;
+    [self.view addSubview:playerView];
+    [playerView wcc_addRotationXYAnimation:M_PI_2 duration:1 autoReverse:NO];
+    [playerView wcc_addScaleXYAnimation:2 duration:1 autoReverse:NO];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -27,11 +34,6 @@
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
     [super touchesBegan:touches withEvent:event];
-//    [FileManager createPath:@"/country/province/city/district"];
-    if ([FileManager removePath:@"country/province/city/district/"]) {
-        NSLog(@"删除成功");
-    }else{
-        NSLog(@"删除失败");
-    }
+    [DownloadHelper downloadFileWithURL:videoURL];
 }
 @end

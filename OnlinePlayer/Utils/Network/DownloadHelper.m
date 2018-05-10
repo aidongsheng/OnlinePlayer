@@ -8,7 +8,7 @@
 
 #import "DownloadHelper.h"
 
-@interface DownloadHelper()<NSURLSessionDownloadDelegate,NSURLSessionTaskDelegate,NSURLSessionDataDelegate>
+@interface DownloadHelper()<NSURLSessionDownloadDelegate,NSURLSessionTaskDelegate,NSURLSessionDataDelegate,NSURLSessionDelegate>
 
 @end
 
@@ -16,7 +16,7 @@
 /**
  下载视频
  */
-- (void)downloadFileWithURL:(NSString *)videlUrl
++ (void)downloadFileWithURL:(NSString *)videlUrl
 {
     NSURL *urlVideoUrl = [NSURL URLWithString:videlUrl];
     NSMutableURLRequest *reqDownload = [NSMutableURLRequest requestWithURL:urlVideoUrl cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:30];
@@ -36,7 +36,7 @@
 //  下载完成在此处实现，可进行保存操作
 - (void)URLSession:(NSURLSession *)session downloadTask:(NSURLSessionDownloadTask *)downloadTask didFinishDownloadingToURL:(NSURL *)location
 {
-    
+    NSLog(@"location:%@",location);
 }
 //  断点下载在此处实现
 - (void)URLSession:(NSURLSession *)session downloadTask:(NSURLSessionDownloadTask *)downloadTask didResumeAtOffset:(int64_t)fileOffset expectedTotalBytes:(int64_t)expectedTotalBytes
@@ -58,7 +58,7 @@
 //  收到下载数据代理方法
 - (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveData:(NSData *)data
 {
-    
+    NSLog(@"收到下载数据代理方法");
 }
 - (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didBecomeStreamTask:(NSURLSessionStreamTask *)streamTask
 API_AVAILABLE(ios(9.0)){

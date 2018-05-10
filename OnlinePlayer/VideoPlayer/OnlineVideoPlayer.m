@@ -56,7 +56,7 @@
 
 - (void)playerVideoWithUrl:(NSString *)videoUrl
 {
-    ((AVPlayerLayer *)(self.layer)).videoGravity = AVLayerVideoGravityResizeAspectFill;
+    ((AVPlayerLayer *)(self.layer)).videoGravity = AVLayerVideoGravityResizeAspect;
     
     if ([self isWiFi]) {
         if ([self isCachedVideoFileExsit:videoUrl]) {

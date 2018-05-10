@@ -29,4 +29,5 @@
 #import <FBShimmeringLayer.h>
 
 #import "FileManager.h"
+#import "DownloadHelper.h"
 #endif /* PrefixHeader_pch */
