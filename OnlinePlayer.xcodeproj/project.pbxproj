@@ -7,25 +7,69 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E02AA4D20A442B300995635 /* HttpHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E02AA4C20A442B300995635 /* HttpHelper.m */; };
+		5E02AA5020A442CE00995635 /* DownloadHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E02AA4F20A442CE00995635 /* DownloadHelper.m */; };
+		5E02AA5420A44B7000995635 /* FileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E02AA5320A44B7000995635 /* FileManager.m */; };
 		5E7447D120A30570007F52F4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E7447D020A30570007F52F4 /* AppDelegate.m */; };
-		5E7447D420A30570007F52F4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E7447D320A30570007F52F4 /* ViewController.m */; };
-		5E7447D720A30570007F52F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E7447D520A30570007F52F4 /* Main.storyboard */; };
 		5E7447D920A3057A007F52F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E7447D820A3057A007F52F4 /* Assets.xcassets */; };
-		5E7447DC20A3057A007F52F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E7447DA20A3057A007F52F4 /* LaunchScreen.storyboard */; };
 		5E7447DF20A3057A007F52F4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E7447DE20A3057A007F52F4 /* main.m */; };
+		5E7447E820A30762007F52F4 /* OnlineVideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E7447E720A30762007F52F4 /* OnlineVideoPlayer.m */; };
+		5E7447EC20A3D6A0007F52F4 /* GCDManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E7447EB20A3D6A0007F52F4 /* GCDManager.m */; };
+		5E74480520A3D6C3007F52F4 /* NSDictionary+ADSCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E7447F020A3D6C3007F52F4 /* NSDictionary+ADSCategory.m */; };
+		5E74480620A3D6C3007F52F4 /* NSObject+GetClassProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E7447F320A3D6C3007F52F4 /* NSObject+GetClassProperty.m */; };
+		5E74480720A3D6C3007F52F4 /* NSString+ADS.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E7447F620A3D6C3007F52F4 /* NSString+ADS.m */; };
+		5E74480820A3D6C3007F52F4 /* UIButton+ADSAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E7447F920A3D6C3007F52F4 /* UIButton+ADSAdd.m */; };
+		5E74480920A3D6C3007F52F4 /* UIFont+Fonts.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E7447FC20A3D6C3007F52F4 /* UIFont+Fonts.m */; };
+		5E74480A20A3D6C3007F52F4 /* UIView+BlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E7447FF20A3D6C3007F52F4 /* UIView+BlurView.m */; };
+		5E74480B20A3D6C3007F52F4 /* UIView+POPAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E74480120A3D6C3007F52F4 /* UIView+POPAnimation.m */; };
+		5E74480C20A3D6C3007F52F4 /* UIViewController+DefaultView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E74480420A3D6C3007F52F4 /* UIViewController+DefaultView.m */; };
+		5E74481220A3F27C007F52F4 /* UIView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E74481120A3F27C007F52F4 /* UIView+Additions.m */; };
+		5E74481720A3FA0A007F52F4 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E74481620A3FA0A007F52F4 /* HomeViewController.m */; };
+		D51ABE3C98E5AB7212645B1B /* libPods-OnlinePlayer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EDAD794ED80CB5800D17B591 /* libPods-OnlinePlayer.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		29E8EE8FB9978EAD31F93110 /* Pods-OnlinePlayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnlinePlayer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OnlinePlayer/Pods-OnlinePlayer.debug.xcconfig"; sourceTree = "<group>"; };
+		5E02AA4B20A442B300995635 /* HttpHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HttpHelper.h; sourceTree = "<group>"; };
+		5E02AA4C20A442B300995635 /* HttpHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HttpHelper.m; sourceTree = "<group>"; };
+		5E02AA4E20A442CE00995635 /* DownloadHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DownloadHelper.h; sourceTree = "<group>"; };
+		5E02AA4F20A442CE00995635 /* DownloadHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DownloadHelper.m; sourceTree = "<group>"; };
+		5E02AA5220A44B7000995635 /* FileManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FileManager.h; sourceTree = "<group>"; };
+		5E02AA5320A44B7000995635 /* FileManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FileManager.m; sourceTree = "<group>"; };
 		5E7447CC20A30570007F52F4 /* OnlinePlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnlinePlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E7447CF20A30570007F52F4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5E7447D020A30570007F52F4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		5E7447D220A30570007F52F4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		5E7447D320A30570007F52F4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		5E7447D620A30570007F52F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5E7447D820A3057A007F52F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		5E7447DB20A3057A007F52F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5E7447DD20A3057A007F52F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5E7447DE20A3057A007F52F4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5E7447E620A30762007F52F4 /* OnlineVideoPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OnlineVideoPlayer.h; sourceTree = "<group>"; };
+		5E7447E720A30762007F52F4 /* OnlineVideoPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OnlineVideoPlayer.m; sourceTree = "<group>"; };
+		5E7447EA20A3D6A0007F52F4 /* GCDManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDManager.h; sourceTree = "<group>"; };
+		5E7447EB20A3D6A0007F52F4 /* GCDManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDManager.m; sourceTree = "<group>"; };
+		5E7447EF20A3D6C3007F52F4 /* NSDictionary+ADSCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+ADSCategory.h"; sourceTree = "<group>"; };
+		5E7447F020A3D6C3007F52F4 /* NSDictionary+ADSCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+ADSCategory.m"; sourceTree = "<group>"; };
+		5E7447F220A3D6C3007F52F4 /* NSObject+GetClassProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+GetClassProperty.h"; sourceTree = "<group>"; };
+		5E7447F320A3D6C3007F52F4 /* NSObject+GetClassProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+GetClassProperty.m"; sourceTree = "<group>"; };
+		5E7447F520A3D6C3007F52F4 /* NSString+ADS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+ADS.h"; sourceTree = "<group>"; };
+		5E7447F620A3D6C3007F52F4 /* NSString+ADS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+ADS.m"; sourceTree = "<group>"; };
+		5E7447F820A3D6C3007F52F4 /* UIButton+ADSAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+ADSAdd.h"; sourceTree = "<group>"; };
+		5E7447F920A3D6C3007F52F4 /* UIButton+ADSAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+ADSAdd.m"; sourceTree = "<group>"; };
+		5E7447FB20A3D6C3007F52F4 /* UIFont+Fonts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+Fonts.h"; sourceTree = "<group>"; };
+		5E7447FC20A3D6C3007F52F4 /* UIFont+Fonts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+Fonts.m"; sourceTree = "<group>"; };
+		5E7447FE20A3D6C3007F52F4 /* UIView+BlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BlurView.h"; sourceTree = "<group>"; };
+		5E7447FF20A3D6C3007F52F4 /* UIView+BlurView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BlurView.m"; sourceTree = "<group>"; };
+		5E74480020A3D6C3007F52F4 /* UIView+POPAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+POPAnimation.h"; sourceTree = "<group>"; };
+		5E74480120A3D6C3007F52F4 /* UIView+POPAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+POPAnimation.m"; sourceTree = "<group>"; };
+		5E74480320A3D6C3007F52F4 /* UIViewController+DefaultView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+DefaultView.h"; sourceTree = "<group>"; };
+		5E74480420A3D6C3007F52F4 /* UIViewController+DefaultView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+DefaultView.m"; sourceTree = "<group>"; };
+		5E74480D20A3D710007F52F4 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		5E74481020A3F27C007F52F4 /* UIView+Additions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Additions.h"; sourceTree = "<group>"; };
+		5E74481120A3F27C007F52F4 /* UIView+Additions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Additions.m"; sourceTree = "<group>"; };
+		5E74481320A3F6A6007F52F4 /* OnlinePlayerMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OnlinePlayerMacro.h; sourceTree = "<group>"; };
+		5E74481520A3FA0A007F52F4 /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		5E74481620A3FA0A007F52F4 /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		82506A366363EE907A05A203 /* Pods-OnlinePlayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnlinePlayer.release.xcconfig"; path = "Pods/Target Support Files/Pods-OnlinePlayer/Pods-OnlinePlayer.release.xcconfig"; sourceTree = "<group>"; };
+		EDAD794ED80CB5800D17B591 /* libPods-OnlinePlayer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OnlinePlayer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +77,40 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D51ABE3C98E5AB7212645B1B /* libPods-OnlinePlayer.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E02AA4720A4424A00995635 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				5E02AA4B20A442B300995635 /* HttpHelper.h */,
+				5E02AA4C20A442B300995635 /* HttpHelper.m */,
+				5E02AA4E20A442CE00995635 /* DownloadHelper.h */,
+				5E02AA4F20A442CE00995635 /* DownloadHelper.m */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		5E02AA5120A44B4300995635 /* File */ = {
+			isa = PBXGroup;
+			children = (
+				5E02AA5220A44B7000995635 /* FileManager.h */,
+				5E02AA5320A44B7000995635 /* FileManager.m */,
+			);
+			path = File;
+			sourceTree = "<group>";
+		};
 		5E7447C320A30570007F52F4 = {
 			isa = PBXGroup;
 			children = (
 				5E7447CE20A30570007F52F4 /* OnlinePlayer */,
 				5E7447CD20A30570007F52F4 /* Products */,
+				B73A5078147F8D1256D46379 /* Pods */,
+				A996A2D44ECF6FACF5F161B2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,17 +125,146 @@
 		5E7447CE20A30570007F52F4 /* OnlinePlayer */ = {
 			isa = PBXGroup;
 			children = (
+				5E74481420A3F9E3007F52F4 /* ViewController */,
+				5E7447ED20A3D6C3007F52F4 /* Category */,
+				5E7447E920A3D68B007F52F4 /* Utils */,
+				5E7447E520A30746007F52F4 /* VideoPlayer */,
 				5E7447CF20A30570007F52F4 /* AppDelegate.h */,
 				5E7447D020A30570007F52F4 /* AppDelegate.m */,
-				5E7447D220A30570007F52F4 /* ViewController.h */,
-				5E7447D320A30570007F52F4 /* ViewController.m */,
-				5E7447D520A30570007F52F4 /* Main.storyboard */,
 				5E7447D820A3057A007F52F4 /* Assets.xcassets */,
-				5E7447DA20A3057A007F52F4 /* LaunchScreen.storyboard */,
 				5E7447DD20A3057A007F52F4 /* Info.plist */,
 				5E7447DE20A3057A007F52F4 /* main.m */,
+				5E74480D20A3D710007F52F4 /* PrefixHeader.pch */,
+				5E74481320A3F6A6007F52F4 /* OnlinePlayerMacro.h */,
 			);
 			path = OnlinePlayer;
+			sourceTree = "<group>";
+		};
+		5E7447E520A30746007F52F4 /* VideoPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				5E7447E620A30762007F52F4 /* OnlineVideoPlayer.h */,
+				5E7447E720A30762007F52F4 /* OnlineVideoPlayer.m */,
+			);
+			path = VideoPlayer;
+			sourceTree = "<group>";
+		};
+		5E7447E920A3D68B007F52F4 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				5E02AA5120A44B4300995635 /* File */,
+				5E02AA4720A4424A00995635 /* Network */,
+				5E7447EA20A3D6A0007F52F4 /* GCDManager.h */,
+				5E7447EB20A3D6A0007F52F4 /* GCDManager.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		5E7447ED20A3D6C3007F52F4 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				5E7447EE20A3D6C3007F52F4 /* NSDictionary */,
+				5E7447F120A3D6C3007F52F4 /* NSObject */,
+				5E7447F420A3D6C3007F52F4 /* NSString */,
+				5E7447F720A3D6C3007F52F4 /* UIButton */,
+				5E7447FA20A3D6C3007F52F4 /* UIFont */,
+				5E7447FD20A3D6C3007F52F4 /* UIView */,
+				5E74480220A3D6C3007F52F4 /* UIViewController */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		5E7447EE20A3D6C3007F52F4 /* NSDictionary */ = {
+			isa = PBXGroup;
+			children = (
+				5E7447EF20A3D6C3007F52F4 /* NSDictionary+ADSCategory.h */,
+				5E7447F020A3D6C3007F52F4 /* NSDictionary+ADSCategory.m */,
+			);
+			path = NSDictionary;
+			sourceTree = "<group>";
+		};
+		5E7447F120A3D6C3007F52F4 /* NSObject */ = {
+			isa = PBXGroup;
+			children = (
+				5E7447F220A3D6C3007F52F4 /* NSObject+GetClassProperty.h */,
+				5E7447F320A3D6C3007F52F4 /* NSObject+GetClassProperty.m */,
+			);
+			path = NSObject;
+			sourceTree = "<group>";
+		};
+		5E7447F420A3D6C3007F52F4 /* NSString */ = {
+			isa = PBXGroup;
+			children = (
+				5E7447F520A3D6C3007F52F4 /* NSString+ADS.h */,
+				5E7447F620A3D6C3007F52F4 /* NSString+ADS.m */,
+			);
+			path = NSString;
+			sourceTree = "<group>";
+		};
+		5E7447F720A3D6C3007F52F4 /* UIButton */ = {
+			isa = PBXGroup;
+			children = (
+				5E7447F820A3D6C3007F52F4 /* UIButton+ADSAdd.h */,
+				5E7447F920A3D6C3007F52F4 /* UIButton+ADSAdd.m */,
+			);
+			path = UIButton;
+			sourceTree = "<group>";
+		};
+		5E7447FA20A3D6C3007F52F4 /* UIFont */ = {
+			isa = PBXGroup;
+			children = (
+				5E7447FB20A3D6C3007F52F4 /* UIFont+Fonts.h */,
+				5E7447FC20A3D6C3007F52F4 /* UIFont+Fonts.m */,
+			);
+			path = UIFont;
+			sourceTree = "<group>";
+		};
+		5E7447FD20A3D6C3007F52F4 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				5E7447FE20A3D6C3007F52F4 /* UIView+BlurView.h */,
+				5E7447FF20A3D6C3007F52F4 /* UIView+BlurView.m */,
+				5E74480020A3D6C3007F52F4 /* UIView+POPAnimation.h */,
+				5E74480120A3D6C3007F52F4 /* UIView+POPAnimation.m */,
+				5E74481020A3F27C007F52F4 /* UIView+Additions.h */,
+				5E74481120A3F27C007F52F4 /* UIView+Additions.m */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
+		5E74480220A3D6C3007F52F4 /* UIViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5E74480320A3D6C3007F52F4 /* UIViewController+DefaultView.h */,
+				5E74480420A3D6C3007F52F4 /* UIViewController+DefaultView.m */,
+			);
+			path = UIViewController;
+			sourceTree = "<group>";
+		};
+		5E74481420A3F9E3007F52F4 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5E74481520A3FA0A007F52F4 /* HomeViewController.h */,
+				5E74481620A3FA0A007F52F4 /* HomeViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		A996A2D44ECF6FACF5F161B2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EDAD794ED80CB5800D17B591 /* libPods-OnlinePlayer.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B73A5078147F8D1256D46379 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				29E8EE8FB9978EAD31F93110 /* Pods-OnlinePlayer.debug.xcconfig */,
+				82506A366363EE907A05A203 /* Pods-OnlinePlayer.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -78,6 +274,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5E7447E220A3057A007F52F4 /* Build configuration list for PBXNativeTarget "OnlinePlayer" */;
 			buildPhases = (
+				9DEFC711952AD05D0D1BC3BA /* [CP] Check Pods Manifest.lock */,
 				5E7447C820A30570007F52F4 /* Sources */,
 				5E7447C920A30570007F52F4 /* Frameworks */,
 				5E7447CA20A30570007F52F4 /* Resources */,
@@ -128,45 +325,59 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E7447DC20A3057A007F52F4 /* LaunchScreen.storyboard in Resources */,
 				5E7447D920A3057A007F52F4 /* Assets.xcassets in Resources */,
-				5E7447D720A30570007F52F4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9DEFC711952AD05D0D1BC3BA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OnlinePlayer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5E7447C820A30570007F52F4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E7447D420A30570007F52F4 /* ViewController.m in Sources */,
+				5E74480C20A3D6C3007F52F4 /* UIViewController+DefaultView.m in Sources */,
+				5E74480520A3D6C3007F52F4 /* NSDictionary+ADSCategory.m in Sources */,
+				5E74480620A3D6C3007F52F4 /* NSObject+GetClassProperty.m in Sources */,
+				5E02AA5020A442CE00995635 /* DownloadHelper.m in Sources */,
+				5E74480B20A3D6C3007F52F4 /* UIView+POPAnimation.m in Sources */,
+				5E74480920A3D6C3007F52F4 /* UIFont+Fonts.m in Sources */,
+				5E74481720A3FA0A007F52F4 /* HomeViewController.m in Sources */,
 				5E7447DF20A3057A007F52F4 /* main.m in Sources */,
+				5E02AA4D20A442B300995635 /* HttpHelper.m in Sources */,
+				5E74480720A3D6C3007F52F4 /* NSString+ADS.m in Sources */,
 				5E7447D120A30570007F52F4 /* AppDelegate.m in Sources */,
+				5E7447EC20A3D6A0007F52F4 /* GCDManager.m in Sources */,
+				5E7447E820A30762007F52F4 /* OnlineVideoPlayer.m in Sources */,
+				5E74480820A3D6C3007F52F4 /* UIButton+ADSAdd.m in Sources */,
+				5E02AA5420A44B7000995635 /* FileManager.m in Sources */,
+				5E74480A20A3D6C3007F52F4 /* UIView+BlurView.m in Sources */,
+				5E74481220A3F27C007F52F4 /* UIView+Additions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		5E7447D520A30570007F52F4 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5E7447D620A30570007F52F4 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		5E7447DA20A3057A007F52F4 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5E7447DB20A3057A007F52F4 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		5E7447E020A3057A007F52F4 /* Debug */ = {
@@ -281,11 +492,15 @@
 		};
 		5E7447E320A3057A007F52F4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 29E8EE8FB9978EAD31F93110 /* Pods-OnlinePlayer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B74XK883LC;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/OnlinePlayer/PrefixHeader.pch";
 				INFOPLIST_FILE = OnlinePlayer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -293,16 +508,21 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.dongsheng.OnlinePlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
 		};
 		5E7447E420A3057A007F52F4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 82506A366363EE907A05A203 /* Pods-OnlinePlayer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B74XK883LC;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/OnlinePlayer/PrefixHeader.pch";
 				INFOPLIST_FILE = OnlinePlayer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -310,6 +530,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.dongsheng.OnlinePlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Release;
 		};

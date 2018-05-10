@@ -1,0 +1,32 @@
+//
+//  PrefixHeader.pch
+//  OnlinePlayer
+//
+//  Created by wcc on 2018/5/10.
+//  Copyright © 2018年 aidongsheng. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "OnlinePlayerMacro.h"
+
+#import "NSString+ADS.h"
+#import "NSObject+GetClassProperty.h"
+#import "UIButton+ADSAdd.h"
+#import "UIView+BlurView.h"
+#import "UIView+POPAnimation.h"
+#import "UIViewController+DefaultView.h"
+#import "UIFont+Fonts.h"
+#import "GCDManager.h"
+#import "UIView+Additions.h"
+#import <objc/runtime.h>
+
+#import <FBShimmering.h>
+#import <Masonry.h>
+#import <YYKit.h>
+#import <FBShimmeringView.h>
+#import <FBShimmeringLayer.h>
+
+#import "FileManager.h"
+#endif /* PrefixHeader_pch */
