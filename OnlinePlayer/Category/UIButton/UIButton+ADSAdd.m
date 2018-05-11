@@ -8,27 +8,45 @@
 
 #import "UIButton+ADSAdd.h"
 
+
+
+static const char *aKey;
+
 @implementation UIButton (ADSAdd)
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+
+- (instancetype)initWithEventBlock:(ClickBlock)eventBlock
 {
-    [super touchesBegan:touches withEvent:event];
-    
+if (self = [super init]) {
+    if (self.clickblock != eventBlock) {
+        objc_setAssociatedObject(self, @selector(clickblock), eventBlock, OBJC_ASSOCIATION_COPY_NONATOMIC);
+        
+        [self addTarget:self
+                 action:@selector(clickEvent:)
+       forControlEvents:UIControlEventTouchUpInside];
+    }else{
+        [self removeTarget:self
+                    action:@selector(clickEvent:)
+          forControlEvents:UIControlEventTouchUpInside];
+    }
 }
-- (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+return self;
+}
+
+- (void)clickEvent:(UIButton *)button
 {
-    [super touchesMoved:touches withEvent:event];
-    UITouch *touch = [touches allObjects].firstObject;
-    CGPoint center = [touch locationInView:self.superview];
-    self.frame = CGRectMake(center.x-self.width/2, center.y-self.height/2, self.width, self.height);
+if (self.clickblock) {
+    self.clickblock(button);
 }
-- (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+}
+
+- (void)setClickblock:(ClickBlock)clickblock
 {
-    [super touchesEnded:touches withEvent:event];
-    
+objc_setAssociatedObject(self, aKey, self.clickblock, OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
-- (void)touchesCancelled:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+
+- (ClickBlock)clickblock
 {
-    [super touchesCancelled:touches withEvent:event];
-    
+return objc_getAssociatedObject(self, _cmd)  ;
 }
+
 @end

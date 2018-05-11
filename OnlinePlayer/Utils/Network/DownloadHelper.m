@@ -10,6 +10,8 @@
 
 @interface DownloadHelper()<NSURLSessionDataDelegate,NSURLConnectionDataDelegate,NSURLSessionDownloadDelegate>
 @property (nonatomic, strong) NSString *path;
+@property (nonatomic, assign) float downloadProgress;
+@property (nonatomic, copy)   downloadProgress block;
 @end
 
 @implementation DownloadHelper
@@ -24,7 +26,6 @@
     });
     return instance;
 }
-
 /**
  下载文件
  */
@@ -75,21 +76,9 @@
 {
     float packageLength = bytesWritten;
     float per = totalBytesWritten/(float)totalBytesExpectedToWrite;
-    NSLog(@"下行进度:%3.1f%%   下行网速:%5.1f kbps",per * 100,(float)packageLength/1024);
-}
-//  收到接口 response 代理方法
-- (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveResponse:(NSURLResponse *)response completionHandler:(void (^)(NSURLSessionResponseDisposition))completionHandler
-{
-    NSLog(@"收到接口 response 代理方法");
-}
-//  收到下载数据代理方法
-- (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveData:(NSData *)data
-{
-    NSLog(@"收到下载数据代理方法");
-}
-- (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didBecomeStreamTask:(NSURLSessionStreamTask *)streamTask
-API_AVAILABLE(ios(9.0)){
+    _downloadProgress = per;
     
+    NSLog(@"下行进度:%3.1f%%   下行网速:%5.1f kbps",per * 100,(float)packageLength/1024);
 }
 
 @end

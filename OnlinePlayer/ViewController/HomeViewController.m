@@ -9,6 +9,8 @@
 #import "HomeViewController.h"
 #import "OnlineVideoPlayer.h"
 
+typedef void(^ChangeColor)(UIColor *bgColor);
+
 @interface HomeViewController ()<OnlineVideoPlayerDelegate>
 
 @end
@@ -27,14 +29,27 @@
 //    [playerView wcc_addScaleXYAnimation:2 duration:1 autoReverse:NO];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
     [super touchesBegan:touches withEvent:event];
-    [[DownloadHelper shareInstance] downloadFileWithURL:swoVideoURL toPath:@"china/anhui/suzhou"];
+//    [[DownloadHelper shareInstance] downloadFileWithURL:swoVideoURL toPath:@"china/anui/suzh阿斯蒂芬ou"];
+//    [HomeViewController changeBackgroundColor:^(UIColor *bgColor) {
+//        self.view.backgroundColor = bgColor;
+//    }];
+//
+    UIButton *clickBtn = [[UIButton alloc]initWithEventBlock:^(UIButton *button) {
+        NSLog(@"click");
+    }];
+    clickBtn.frame = CGRectMake(100, 100, 100, 100);
+    [self.view addSubview:clickBtn];
+    NSString *hexColorString = @"af0fd";
+    clickBtn.backgroundColor = [UIColor colorWithHex:hexColorString];
+    NSLog(@"%@ 是有效的十六进制数 ? %i",hexColorString,[hexColorString isValidHex]);
+}
+
++ (void)changeBackgroundColor:(ChangeColor)block
+{
+    UIColor *color = [UIColor purpleColor];
+    block(color);
 }
 @end

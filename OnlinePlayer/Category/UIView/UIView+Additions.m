@@ -51,4 +51,22 @@
     self.frame = CGRectMake(self.originX, self.originY, self.width, height);
 }
 
+- (UIImage *)ads_snapshotImage
+{
+    UIGraphicsBeginImageContextWithOptions(self.bounds.size, self.opaque, 1);
+    [self.layer renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage *snapshot = UIGraphicsGetImageFromCurrentImageContext();
+    return snapshot;
+}
+
+- (UIViewController *)visibleViewController
+{
+    for (UIView *view = self; view;view = view.superview) {
+        id viewController = [view nextResponder];
+        if ([viewController isKindOfClass:[UIViewController class]]) {
+            return (UIViewController *)viewController;
+        }
+    }
+    return nil;
+}
 @end

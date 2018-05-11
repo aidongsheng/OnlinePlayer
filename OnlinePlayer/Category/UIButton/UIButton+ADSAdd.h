@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void(^ClickBlock)(UIButton *button);
+
 @interface UIButton (ADSAdd)
+@property (nonatomic,copy) ClickBlock clickblock;
+
+- (instancetype)initWithEventBlock:(ClickBlock)eventBlock;
 
 @end

@@ -10,6 +10,7 @@
 		5E02AA4D20A442B300995635 /* HttpHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E02AA4C20A442B300995635 /* HttpHelper.m */; };
 		5E02AA5020A442CE00995635 /* DownloadHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E02AA4F20A442CE00995635 /* DownloadHelper.m */; };
 		5E02AA5420A44B7000995635 /* FileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E02AA5320A44B7000995635 /* FileManager.m */; };
+		5E031BB120A582DE00CD322E /* UIColor+ADSAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E031BB020A582DE00CD322E /* UIColor+ADSAdd.m */; };
 		5E7447D120A30570007F52F4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E7447D020A30570007F52F4 /* AppDelegate.m */; };
 		5E7447D920A3057A007F52F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E7447D820A3057A007F52F4 /* Assets.xcassets */; };
 		5E7447DF20A3057A007F52F4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E7447DE20A3057A007F52F4 /* main.m */; };
@@ -36,6 +37,8 @@
 		5E02AA4F20A442CE00995635 /* DownloadHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DownloadHelper.m; sourceTree = "<group>"; };
 		5E02AA5220A44B7000995635 /* FileManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FileManager.h; sourceTree = "<group>"; };
 		5E02AA5320A44B7000995635 /* FileManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FileManager.m; sourceTree = "<group>"; };
+		5E031BAF20A582DE00CD322E /* UIColor+ADSAdd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+ADSAdd.h"; sourceTree = "<group>"; };
+		5E031BB020A582DE00CD322E /* UIColor+ADSAdd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ADSAdd.m"; sourceTree = "<group>"; };
 		5E7447CC20A30570007F52F4 /* OnlinePlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnlinePlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E7447CF20A30570007F52F4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5E7447D020A30570007F52F4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -53,7 +56,7 @@
 		5E7447F520A3D6C3007F52F4 /* NSString+ADS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+ADS.h"; sourceTree = "<group>"; };
 		5E7447F620A3D6C3007F52F4 /* NSString+ADS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+ADS.m"; sourceTree = "<group>"; };
 		5E7447F820A3D6C3007F52F4 /* UIButton+ADSAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+ADSAdd.h"; sourceTree = "<group>"; };
-		5E7447F920A3D6C3007F52F4 /* UIButton+ADSAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+ADSAdd.m"; sourceTree = "<group>"; };
+		5E7447F920A3D6C3007F52F4 /* UIButton+ADSAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+ADSAdd.m"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		5E7447FB20A3D6C3007F52F4 /* UIFont+Fonts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+Fonts.h"; sourceTree = "<group>"; };
 		5E7447FC20A3D6C3007F52F4 /* UIFont+Fonts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+Fonts.m"; sourceTree = "<group>"; };
 		5E7447FE20A3D6C3007F52F4 /* UIView+BlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BlurView.h"; sourceTree = "<group>"; };
@@ -102,6 +105,15 @@
 				5E02AA5320A44B7000995635 /* FileManager.m */,
 			);
 			path = File;
+			sourceTree = "<group>";
+		};
+		5E031BAE20A582B900CD322E /* UIColor */ = {
+			isa = PBXGroup;
+			children = (
+				5E031BAF20A582DE00CD322E /* UIColor+ADSAdd.h */,
+				5E031BB020A582DE00CD322E /* UIColor+ADSAdd.m */,
+			);
+			path = UIColor;
 			sourceTree = "<group>";
 		};
 		5E7447C320A30570007F52F4 = {
@@ -163,6 +175,7 @@
 		5E7447ED20A3D6C3007F52F4 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				5E031BAE20A582B900CD322E /* UIColor */,
 				5E7447EE20A3D6C3007F52F4 /* NSDictionary */,
 				5E7447F120A3D6C3007F52F4 /* NSObject */,
 				5E7447F420A3D6C3007F52F4 /* NSString */,
@@ -371,6 +384,7 @@
 				5E7447EC20A3D6A0007F52F4 /* GCDManager.m in Sources */,
 				5E7447E820A30762007F52F4 /* OnlineVideoPlayer.m in Sources */,
 				5E74480820A3D6C3007F52F4 /* UIButton+ADSAdd.m in Sources */,
+				5E031BB120A582DE00CD322E /* UIColor+ADSAdd.m in Sources */,
 				5E02AA5420A44B7000995635 /* FileManager.m in Sources */,
 				5E74480A20A3D6C3007F52F4 /* UIView+BlurView.m in Sources */,
 				5E74481220A3F27C007F52F4 /* UIView+Additions.m in Sources */,

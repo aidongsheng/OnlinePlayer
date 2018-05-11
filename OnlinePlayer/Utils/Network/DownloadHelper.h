@@ -8,9 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
+typedef void(^downloadProgress)(float progress);
+
 @interface DownloadHelper : NSObject
 
 + (DownloadHelper *)shareInstance;
 
 - (void)downloadFileWithURL:(NSString *)videlUrl toPath:(NSString *)path;
+
 @end

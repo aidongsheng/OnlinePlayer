@@ -18,6 +18,7 @@
 #import "UIView+POPAnimation.h"
 #import "UIViewController+DefaultView.h"
 #import "UIFont+Fonts.h"
+#import "UIColor+ADSAdd.h"
 #import "GCDManager.h"
 #import "UIView+Additions.h"
 #import <objc/runtime.h>
@@ -30,4 +31,6 @@
 
 #import "FileManager.h"
 #import "DownloadHelper.h"
+
+
 #endif /* PrefixHeader_pch */

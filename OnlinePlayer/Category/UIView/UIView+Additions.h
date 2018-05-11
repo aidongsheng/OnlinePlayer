@@ -14,4 +14,18 @@
 @property (nonatomic, assign) CGFloat originX;
 @property (nonatomic, assign) CGFloat originY;
 
+
+/**
+ 获取截屏图片
+
+ @return 截屏图片
+ */
+- (UIImage *)ads_snapshotImage;
+
+/**
+ 获取当前控制器
+
+ @return 当前视图所属控制器对象
+ */
+- (UIViewController *)visibleViewController;
 @end

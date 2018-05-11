@@ -24,4 +24,25 @@
 
 - (NSString *)ads_CRC32String;
 
+
+/**
+ 移除字符串中包含的所有字符
+
+ @param charsToBeRemoved 待移除字符
+ @return 移除字符后的字符串
+ */
+- (NSString *)removeAllCharContainedInString:(NSString *)charsToBeRemoved;
+
+/**
+ 字符串查找替换
+
+ @param findedString 查找到的字符串
+ @param replacedString 替换字符串
+ @return 替换过后的字符串
+ */
+- (NSString *)replaceString:(NSString *)findedString withString:(NSString *)replacedString;
+
+- (int *)hexToDecimal;
+
+- (BOOL)isValidHex;
 @end
