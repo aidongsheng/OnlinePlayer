@@ -45,4 +45,5 @@
 //  用户文件夹
 + (NSString *)userDirectory;
 
++ (NSArray *)numberOfFilesAtPath:(NSString *)path;
 @end

@@ -105,4 +105,20 @@
     return userPath;
 }
 
++ (NSArray *)numberOfFilesAtPath:(NSString *)path
+{
+    path = [[FileManager documentDirectory] stringByAppendingPathComponent:path];
+    NSError *error = nil;
+    NSArray *files = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:path error:&error];
+    NSLog(@"files = %@",files);
+    if (error) {
+        NSLog(@"枚举文件夹 %@ 失败",path);
+        return nil;
+    }else{
+        NSLog(@"枚举文件夹 %@ 成功",path);
+        return files;
+    }
+}
+
+
 @end

@@ -11,40 +11,59 @@
 
 typedef void(^ChangeColor)(UIColor *bgColor);
 
-@interface HomeViewController ()<OnlineVideoPlayerDelegate>
-
+@interface HomeViewController ()<OnlineVideoPlayerDelegate,UITableViewDelegate,UITableViewDataSource>
+@property (nonatomic, strong) UITableView *videoListView;
 @end
 
 #define videoURL        @"http://192.168.101.199:8000/download/bilibili.mp4"
 #define swoVideoURL     @"http://resbj.swochina.com/video/bb601b829bb22bece99dc037323bbed2.mp4"
-
+static NSString * const identifier = @"video_cell_id";
 @implementation HomeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    [self.view addSubview:self.videoListView];
+    [[DownloadHelper shareInstance] downloadFileWithURL:swoVideoURL toPath:@"/videos"];
 }
 
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+- (UITableView *)videoListView
 {
-    [super touchesBegan:touches withEvent:event];
-    
-    UIButton *clickBtn = [[UIButton alloc]initWithEventBlock:^(UIButton *button) {
-        NSLog(@"click");
-        [button wcc_addScaleXYAnimation:1.2 duration:0.3 autoReverse:NO];
-        [button wcc_addTranslationXYAnimation:CGPointMake(arc4random()%300, arc4random()%500) duration:0.3 autoReverse:NO];
-    }];
-    clickBtn.frame = CGRectMake(100, 100, 100, 100);
-    [self.view addSubview:clickBtn];
-    NSString *hexColorString = @"af0fde";
-    clickBtn.backgroundColor = [UIColor colorWithHex:hexColorString];
-    
-    NSLog(@"%li",[@"10ff2011" hexToInt]);
+    if (_videoListView == nil) {
+        _videoListView = [[UITableView alloc]initWithFrame:[UIScreen mainScreen].bounds style:UITableViewStyleGrouped];
+        _videoListView.delegate = self;
+        _videoListView.dataSource = self;
+        [_videoListView registerClass:[UITableViewCell class] forCellReuseIdentifier:identifier];
+    }
+    return _videoListView;
 }
 
-+ (void)changeBackgroundColor:(ChangeColor)block
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    UIColor *color = [UIColor purpleColor];
-    block(color);
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [FileManager numberOfFilesAtPath:@"/videos"].count;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 100;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    if (!cell) {
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:identifier];
+    }
+    cell.textLabel.text = [FileManager numberOfFilesAtPath:@"/videos"][indexPath.row];
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 @end
