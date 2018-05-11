@@ -48,6 +48,13 @@
     scaleAnimation.dynamicsFriction = 15;
     scaleAnimation.dynamicsTension = 200;
     [self.layer pop_addAnimation:scaleAnimation forKey:wccScaleXYAnimationKey];
+//
+//    [self.layer pop_removeAnimationForKey:@"kPOPLayerScaleXxY"];
+//    POPBasicAnimation *scaleAnim = [POPBasicAnimation animationWithPropertyNamed:kPOPLayerScaleXY];
+//    scaleAnim.autoreverses = reverse;
+//    scaleAnim.toValue = @(scale);
+//    scaleAnim.duration = duration;
+//    [self.layer pop_addAnimation:scaleAnim forKey:@"kPOPLayerScaleXxY"];
 }
 
 - (void)wcc_addScaleXAnimation:(CGFloat)scale duration:(CGFloat)duration autoReverse:(BOOL)reverse

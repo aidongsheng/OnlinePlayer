@@ -22,29 +22,24 @@ typedef void(^ChangeColor)(UIColor *bgColor);
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    OnlineVideoPlayer *playerView =[[ OnlineVideoPlayer alloc]initWithVideoUrl:swoVideoURL delegate:self];
-//    playerView.frame = [UIScreen mainScreen].bounds;
-//    [self.view addSubview:playerView];
-//    [playerView wcc_addRotationXYAnimation:M_PI_2 duration:1 autoReverse:NO];
-//    [playerView wcc_addScaleXYAnimation:2 duration:1 autoReverse:NO];
+    
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
     [super touchesBegan:touches withEvent:event];
-//    [[DownloadHelper shareInstance] downloadFileWithURL:swoVideoURL toPath:@"china/anui/suzh阿斯蒂芬ou"];
-//    [HomeViewController changeBackgroundColor:^(UIColor *bgColor) {
-//        self.view.backgroundColor = bgColor;
-//    }];
-//
+    
     UIButton *clickBtn = [[UIButton alloc]initWithEventBlock:^(UIButton *button) {
         NSLog(@"click");
+        [button wcc_addScaleXYAnimation:1.2 duration:0.3 autoReverse:NO];
+        [button wcc_addTranslationXYAnimation:CGPointMake(arc4random()%300, arc4random()%500) duration:0.3 autoReverse:NO];
     }];
     clickBtn.frame = CGRectMake(100, 100, 100, 100);
     [self.view addSubview:clickBtn];
-    NSString *hexColorString = @"af0fd";
+    NSString *hexColorString = @"af0fde";
     clickBtn.backgroundColor = [UIColor colorWithHex:hexColorString];
-    NSLog(@"%@ 是有效的十六进制数 ? %i",hexColorString,[hexColorString isValidHex]);
+    
+    NSLog(@"%li",[@"10ff2011" hexToInt]);
 }
 
 + (void)changeBackgroundColor:(ChangeColor)block

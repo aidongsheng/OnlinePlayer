@@ -44,5 +44,7 @@
 
 - (int *)hexToDecimal;
 
+- (NSInteger)hexToInt;
+
 - (BOOL)isValidHex;
 @end

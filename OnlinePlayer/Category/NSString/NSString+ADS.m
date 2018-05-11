@@ -137,7 +137,6 @@
             
             int_ch[i/2] = int_ch1+int_ch2;
         }
-        free(int_ch);
         return int_ch;
     }
     else
@@ -145,6 +144,31 @@
         NSLog(@"无效十六进制字符串");
         return NULL;
     }
+}
+
+- (NSInteger)hexToInt
+{
+    if ([self isValidHex]) {
+        NSString *hex;
+        if ([self hasPrefix:@"0x"]) {
+            hex = [self substringFromIndex:2];
+        }else{
+            hex = [NSString stringWithFormat:@"%@",self];
+        }
+        int *ptr = [hex hexToDecimal];
+        NSInteger count = hex.length/2;
+        NSInteger total = 0;
+        NSInteger value = 0;
+        for (int index = 0; index < count; ++index) {
+            int tmp = ptr[index];
+            NSUInteger offset = (count - index - 1);
+            value = (tmp << (offset * 8));
+            total += value;
+            NSLog(@"第 %ld 位十六进制数 %d, 向高位偏移 %li 位,得到结果 : %li, 运算总和 : %ld",offset,tmp,(count - index - 1)*8,(long)value,total);
+        }
+        return total;
+    }
+    return 0;
 }
 
 - (BOOL)isValidHex
