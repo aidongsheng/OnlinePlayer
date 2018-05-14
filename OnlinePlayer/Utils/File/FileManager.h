@@ -49,4 +49,5 @@
 
 + (BOOL)isFileExsitAtPath:(NSString *)filePath;
 
++ (unsigned long long )getFileSize:(NSString *)filePath;
 @end

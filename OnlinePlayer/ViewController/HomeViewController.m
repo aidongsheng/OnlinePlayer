@@ -34,6 +34,9 @@ static NSString * const identifier = @"video_cell_id";
         NSError *error = nil;
         NSStringEncoding encoding;
         NSString *contentOfTxt = [[NSString alloc]initWithContentsOfFile:txtPath usedEncoding:&encoding error:&error];
+        NSString *testSizeFilePath = [[FileManager documentDirectory] stringByAppendingPathComponent:@"video/fa4600bd3bda9f2eca398bd8601b49c0.mp4"];
+        unsigned long long fileSize = [FileManager getFileSize:testSizeFilePath];
+        NSLog(@"文件 %@ 大小为:%llu",testSizeFilePath,fileSize);
         [AudioHelper readText:contentOfTxt byWho:vixk];
         
         if (error) {

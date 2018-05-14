@@ -110,6 +110,7 @@
     path = [[FileManager documentDirectory] stringByAppendingPathComponent:path];
     NSError *error = nil;
     NSArray *files = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:path error:&error];
+    
     NSLog(@"files = %@",files);
     if (error) {
         NSLog(@"枚举文件夹 %@ 失败",path);
@@ -126,6 +127,20 @@
     filePath = [filePath ads_SHA256String];
     return [fileMgr fileExistsAtPath:filePath];
 }
+
++ (unsigned long long )getFileSize:(NSString *)filePath
+{
+    NSError *error = nil;
+    //获取newFile2的大小
+    NSDictionary *fileAttr = [[NSFileManager defaultManager] attributesOfItemAtPath:filePath error:&error];
+    if(error == nil){
+        unsigned long long size = [[fileAttr objectForKey:NSFileSize] unsignedLongLongValue];
+        return size;
+    }else{
+        return -1;
+    }
+}
+
 
 
 @end
