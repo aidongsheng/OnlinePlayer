@@ -17,6 +17,13 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    //Set APPID
+    NSString *initString = [[NSString alloc] initWithFormat:@"appid=%@",@"5af92490"];
+    
+    //Configure and initialize iflytek services.(This interface must been invoked in application:didFinishLaunchingWithOptions:)
+    [IFlySpeechUtility createUtility:initString];
+    
     _window = [[UIWindow alloc]init];
     _window.frame = [UIScreen mainScreen].bounds;
     HomeViewController *homeVC = [[HomeViewController alloc]init];

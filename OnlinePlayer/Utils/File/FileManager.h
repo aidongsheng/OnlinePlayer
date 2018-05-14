@@ -46,4 +46,7 @@
 + (NSString *)userDirectory;
 
 + (NSArray *)numberOfFilesAtPath:(NSString *)path;
+
++ (BOOL)isFileExsitAtPath:(NSString *)filePath;
+
 @end

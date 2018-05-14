@@ -11,6 +11,23 @@
 		5E02AA5020A442CE00995635 /* DownloadHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E02AA4F20A442CE00995635 /* DownloadHelper.m */; };
 		5E02AA5420A44B7000995635 /* FileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E02AA5320A44B7000995635 /* FileManager.m */; };
 		5E031BB120A582DE00CD322E /* UIColor+ADSAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E031BB020A582DE00CD322E /* UIColor+ADSAdd.m */; };
+		5E66FC3820A9607300D2C976 /* iflyMSC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E66FC3720A9607200D2C976 /* iflyMSC.framework */; };
+		5E66FC3A20A960A100D2C976 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E66FC3920A960A100D2C976 /* libz.tbd */; };
+		5E66FC3C20A960A700D2C976 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E66FC3B20A960A700D2C976 /* AVFoundation.framework */; };
+		5E66FC3E20A960AD00D2C976 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E66FC3D20A960AD00D2C976 /* SystemConfiguration.framework */; };
+		5E66FC4020A960B400D2C976 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E66FC3F20A960B400D2C976 /* Foundation.framework */; };
+		5E66FC4220A960C000D2C976 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E66FC4120A960C000D2C976 /* CoreTelephony.framework */; };
+		5E66FC4420A960C600D2C976 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E66FC4320A960C600D2C976 /* AudioToolbox.framework */; };
+		5E66FC4620A960CC00D2C976 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E66FC4520A960CC00D2C976 /* UIKit.framework */; };
+		5E66FC4820A960D200D2C976 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E66FC4720A960D200D2C976 /* CoreLocation.framework */; };
+		5E66FC4A20A960D700D2C976 /* Contacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E66FC4920A960D700D2C976 /* Contacts.framework */; };
+		5E66FC4C20A960DD00D2C976 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E66FC4B20A960DD00D2C976 /* AddressBook.framework */; };
+		5E66FC4E20A960E300D2C976 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E66FC4D20A960E300D2C976 /* QuartzCore.framework */; };
+		5E66FC5020A960E900D2C976 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E66FC4F20A960E900D2C976 /* CoreGraphics.framework */; };
+		5E66FC5220A960F000D2C976 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E66FC5120A960F000D2C976 /* libc++.tbd */; };
+		5E66FC5420A960F700D2C976 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E66FC5320A960F700D2C976 /* libicucore.tbd */; };
+		5E66FC5820A961A200D2C976 /* AudioHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E66FC5720A961A200D2C976 /* AudioHelper.m */; };
+		5E66FC5B20A965D800D2C976 /* tangshi300.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5E66FC5A20A965D800D2C976 /* tangshi300.txt */; };
 		5E7447D120A30570007F52F4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E7447D020A30570007F52F4 /* AppDelegate.m */; };
 		5E7447D920A3057A007F52F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E7447D820A3057A007F52F4 /* Assets.xcassets */; };
 		5E7447DF20A3057A007F52F4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E7447DE20A3057A007F52F4 /* main.m */; };
@@ -39,6 +56,24 @@
 		5E02AA5320A44B7000995635 /* FileManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FileManager.m; sourceTree = "<group>"; };
 		5E031BAF20A582DE00CD322E /* UIColor+ADSAdd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+ADSAdd.h"; sourceTree = "<group>"; };
 		5E031BB020A582DE00CD322E /* UIColor+ADSAdd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ADSAdd.m"; sourceTree = "<group>"; };
+		5E66FC3720A9607200D2C976 /* iflyMSC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = iflyMSC.framework; sourceTree = "<group>"; };
+		5E66FC3920A960A100D2C976 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		5E66FC3B20A960A700D2C976 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		5E66FC3D20A960AD00D2C976 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		5E66FC3F20A960B400D2C976 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		5E66FC4120A960C000D2C976 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		5E66FC4320A960C600D2C976 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		5E66FC4520A960CC00D2C976 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		5E66FC4720A960D200D2C976 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		5E66FC4920A960D700D2C976 /* Contacts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Contacts.framework; path = System/Library/Frameworks/Contacts.framework; sourceTree = SDKROOT; };
+		5E66FC4B20A960DD00D2C976 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		5E66FC4D20A960E300D2C976 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		5E66FC4F20A960E900D2C976 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		5E66FC5120A960F000D2C976 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		5E66FC5320A960F700D2C976 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
+		5E66FC5620A961A200D2C976 /* AudioHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioHelper.h; sourceTree = "<group>"; };
+		5E66FC5720A961A200D2C976 /* AudioHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AudioHelper.m; sourceTree = "<group>"; };
+		5E66FC5A20A965D800D2C976 /* tangshi300.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = tangshi300.txt; sourceTree = "<group>"; };
 		5E7447CC20A30570007F52F4 /* OnlinePlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnlinePlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E7447CF20A30570007F52F4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5E7447D020A30570007F52F4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -80,6 +115,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E66FC5420A960F700D2C976 /* libicucore.tbd in Frameworks */,
+				5E66FC5220A960F000D2C976 /* libc++.tbd in Frameworks */,
+				5E66FC5020A960E900D2C976 /* CoreGraphics.framework in Frameworks */,
+				5E66FC4E20A960E300D2C976 /* QuartzCore.framework in Frameworks */,
+				5E66FC4C20A960DD00D2C976 /* AddressBook.framework in Frameworks */,
+				5E66FC4A20A960D700D2C976 /* Contacts.framework in Frameworks */,
+				5E66FC4820A960D200D2C976 /* CoreLocation.framework in Frameworks */,
+				5E66FC4620A960CC00D2C976 /* UIKit.framework in Frameworks */,
+				5E66FC4420A960C600D2C976 /* AudioToolbox.framework in Frameworks */,
+				5E66FC4220A960C000D2C976 /* CoreTelephony.framework in Frameworks */,
+				5E66FC4020A960B400D2C976 /* Foundation.framework in Frameworks */,
+				5E66FC3E20A960AD00D2C976 /* SystemConfiguration.framework in Frameworks */,
+				5E66FC3C20A960A700D2C976 /* AVFoundation.framework in Frameworks */,
+				5E66FC3A20A960A100D2C976 /* libz.tbd in Frameworks */,
+				5E66FC3820A9607300D2C976 /* iflyMSC.framework in Frameworks */,
 				D51ABE3C98E5AB7212645B1B /* libPods-OnlinePlayer.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -116,6 +166,23 @@
 			path = UIColor;
 			sourceTree = "<group>";
 		};
+		5E66FC5520A9614F00D2C976 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				5E66FC5620A961A200D2C976 /* AudioHelper.h */,
+				5E66FC5720A961A200D2C976 /* AudioHelper.m */,
+			);
+			path = Audio;
+			sourceTree = "<group>";
+		};
+		5E66FC5920A965CF00D2C976 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				5E66FC5A20A965D800D2C976 /* tangshi300.txt */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
 		5E7447C320A30570007F52F4 = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +204,7 @@
 		5E7447CE20A30570007F52F4 /* OnlinePlayer */ = {
 			isa = PBXGroup;
 			children = (
+				5E66FC5920A965CF00D2C976 /* Resource */,
 				5E74481420A3F9E3007F52F4 /* ViewController */,
 				5E7447ED20A3D6C3007F52F4 /* Category */,
 				5E7447E920A3D68B007F52F4 /* Utils */,
@@ -164,6 +232,7 @@
 		5E7447E920A3D68B007F52F4 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				5E66FC5520A9614F00D2C976 /* Audio */,
 				5E02AA5120A44B4300995635 /* File */,
 				5E02AA4720A4424A00995635 /* Network */,
 				5E7447EA20A3D6A0007F52F4 /* GCDManager.h */,
@@ -266,6 +335,21 @@
 		A996A2D44ECF6FACF5F161B2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5E66FC5320A960F700D2C976 /* libicucore.tbd */,
+				5E66FC5120A960F000D2C976 /* libc++.tbd */,
+				5E66FC4F20A960E900D2C976 /* CoreGraphics.framework */,
+				5E66FC4D20A960E300D2C976 /* QuartzCore.framework */,
+				5E66FC4B20A960DD00D2C976 /* AddressBook.framework */,
+				5E66FC4920A960D700D2C976 /* Contacts.framework */,
+				5E66FC4720A960D200D2C976 /* CoreLocation.framework */,
+				5E66FC4520A960CC00D2C976 /* UIKit.framework */,
+				5E66FC4320A960C600D2C976 /* AudioToolbox.framework */,
+				5E66FC4120A960C000D2C976 /* CoreTelephony.framework */,
+				5E66FC3F20A960B400D2C976 /* Foundation.framework */,
+				5E66FC3D20A960AD00D2C976 /* SystemConfiguration.framework */,
+				5E66FC3B20A960A700D2C976 /* AVFoundation.framework */,
+				5E66FC3920A960A100D2C976 /* libz.tbd */,
+				5E66FC3720A9607200D2C976 /* iflyMSC.framework */,
 				EDAD794ED80CB5800D17B591 /* libPods-OnlinePlayer.a */,
 			);
 			name = Frameworks;
@@ -339,6 +423,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E7447D920A3057A007F52F4 /* Assets.xcassets in Resources */,
+				5E66FC5B20A965D800D2C976 /* tangshi300.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,6 +458,7 @@
 				5E74480C20A3D6C3007F52F4 /* UIViewController+DefaultView.m in Sources */,
 				5E74480520A3D6C3007F52F4 /* NSDictionary+ADSCategory.m in Sources */,
 				5E74480620A3D6C3007F52F4 /* NSObject+GetClassProperty.m in Sources */,
+				5E66FC5820A961A200D2C976 /* AudioHelper.m in Sources */,
 				5E02AA5020A442CE00995635 /* DownloadHelper.m in Sources */,
 				5E74480B20A3D6C3007F52F4 /* UIView+POPAnimation.m in Sources */,
 				5E74480920A3D6C3007F52F4 /* UIFont+Fonts.m in Sources */,
@@ -511,6 +597,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B74XK883LC;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/OnlinePlayer/PrefixHeader.pch";
 				INFOPLIST_FILE = OnlinePlayer/Info.plist;
@@ -533,6 +624,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B74XK883LC;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/OnlinePlayer/PrefixHeader.pch";
 				INFOPLIST_FILE = OnlinePlayer/Info.plist;

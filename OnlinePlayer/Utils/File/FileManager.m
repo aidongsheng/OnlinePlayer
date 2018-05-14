@@ -120,5 +120,12 @@
     }
 }
 
++ (BOOL)isFileExsitAtPath:(NSString *)filePath
+{
+    NSFileManager *fileMgr = [NSFileManager defaultManager];
+    filePath = [filePath ads_SHA256String];
+    return [fileMgr fileExistsAtPath:filePath];
+}
+
 
 @end

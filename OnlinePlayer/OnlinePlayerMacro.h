@@ -23,4 +23,8 @@
 #define SYSTEM_VERSION_LESS_THAN(v)                 ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedAscending)
 #define SYSTEM_VERSION_LESS_THAN_OR_EQUAL_TO(v)     ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedDescending)
 
+#define Funcname(objc,func)   (objc.func)
+
+#define Funcname(objc,func)   @(((objc.func),#func))
+
 #endif /* OnlinePlayerMacro_h */

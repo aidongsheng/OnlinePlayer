@@ -20,6 +20,7 @@
 #import "UIFont+Fonts.h"
 #import "UIColor+ADSAdd.h"
 #import "GCDManager.h"
+#import "AudioHelper.h"
 #import "UIView+Additions.h"
 #import <objc/runtime.h>
 
@@ -32,5 +33,6 @@
 #import "FileManager.h"
 #import "DownloadHelper.h"
 
+#import <iflyMSC/iflyMSC.h>
 
 #endif /* PrefixHeader_pch */
