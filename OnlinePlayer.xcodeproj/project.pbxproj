@@ -28,6 +28,7 @@
 		5E66FC5420A960F700D2C976 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E66FC5320A960F700D2C976 /* libicucore.tbd */; };
 		5E66FC5820A961A200D2C976 /* AudioHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E66FC5720A961A200D2C976 /* AudioHelper.m */; };
 		5E66FC5B20A965D800D2C976 /* tangshi300.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5E66FC5A20A965D800D2C976 /* tangshi300.txt */; };
+		5E66FC5E20A9883300D2C976 /* IPAddressUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E66FC5D20A9883300D2C976 /* IPAddressUtil.m */; };
 		5E7447D120A30570007F52F4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E7447D020A30570007F52F4 /* AppDelegate.m */; };
 		5E7447D920A3057A007F52F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E7447D820A3057A007F52F4 /* Assets.xcassets */; };
 		5E7447DF20A3057A007F52F4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E7447DE20A3057A007F52F4 /* main.m */; };
@@ -74,6 +75,8 @@
 		5E66FC5620A961A200D2C976 /* AudioHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioHelper.h; sourceTree = "<group>"; };
 		5E66FC5720A961A200D2C976 /* AudioHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AudioHelper.m; sourceTree = "<group>"; };
 		5E66FC5A20A965D800D2C976 /* tangshi300.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = tangshi300.txt; sourceTree = "<group>"; };
+		5E66FC5C20A9883300D2C976 /* IPAddressUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IPAddressUtil.h; sourceTree = "<group>"; };
+		5E66FC5D20A9883300D2C976 /* IPAddressUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IPAddressUtil.m; sourceTree = "<group>"; };
 		5E7447CC20A30570007F52F4 /* OnlinePlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnlinePlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E7447CF20A30570007F52F4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5E7447D020A30570007F52F4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -144,6 +147,8 @@
 				5E02AA4C20A442B300995635 /* HttpHelper.m */,
 				5E02AA4E20A442CE00995635 /* DownloadHelper.h */,
 				5E02AA4F20A442CE00995635 /* DownloadHelper.m */,
+				5E66FC5C20A9883300D2C976 /* IPAddressUtil.h */,
+				5E66FC5D20A9883300D2C976 /* IPAddressUtil.m */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -458,6 +463,7 @@
 				5E74480C20A3D6C3007F52F4 /* UIViewController+DefaultView.m in Sources */,
 				5E74480520A3D6C3007F52F4 /* NSDictionary+ADSCategory.m in Sources */,
 				5E74480620A3D6C3007F52F4 /* NSObject+GetClassProperty.m in Sources */,
+				5E66FC5E20A9883300D2C976 /* IPAddressUtil.m in Sources */,
 				5E66FC5820A961A200D2C976 /* AudioHelper.m in Sources */,
 				5E02AA5020A442CE00995635 /* DownloadHelper.m in Sources */,
 				5E74480B20A3D6C3007F52F4 /* UIView+POPAnimation.m in Sources */,

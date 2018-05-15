@@ -8,12 +8,11 @@
 
 #import "HttpHelper.h"
 
+
 @interface HttpHelper()
 
 @end
 
 @implementation HttpHelper
-
-
 
 @end

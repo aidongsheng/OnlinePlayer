@@ -9,6 +9,7 @@
 #import "HomeViewController.h"
 #import "OnlineVideoPlayer.h"
 #import <iflyMSC/iflyMSC.h>
+
 typedef void(^ChangeColor)(UIColor *bgColor);
 
 @interface HomeViewController ()<OnlineVideoPlayerDelegate,UITableViewDelegate,UITableViewDataSource>
@@ -47,6 +48,8 @@ static NSString * const identifier = @"video_cell_id";
     }else{
         NSLog(@"文件不存在");
     }
+    
+    NSLog(@"IP地址:%@",[IPAddressUtil getIPAddress]);
 }
 
 - (UITableView *)videoListView
