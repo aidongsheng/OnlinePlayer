@@ -28,4 +28,26 @@
  @return 当前视图所属控制器对象
  */
 - (UIViewController *)visibleViewController;
+
+
+/**
+ 显示正确的提示视图
+
+ @param msg 提示字符串
+ */
+- (void)showSuccessMsg:(NSString *)msg;
+
+/**
+ 显示错误或者失败的提示视图
+
+ @param msg 提示字符串
+ */
+- (void)showFailureMsg:(NSString *)msg;
+
+/**
+ 显示提示字符串
+
+ @param msg 提示字符串
+ */
+- (void)showMsg:(NSString *)msg;
 @end
