@@ -10,5 +10,7 @@
 
 @interface IPAddressUtil : NSObject
 
-+ (NSString *)getIPAddress;
++ (NSString *)getWiFiIPAddress;
+
++ (NSString *)getCellIPAddress;
 @end

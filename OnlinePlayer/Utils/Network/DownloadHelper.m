@@ -26,6 +26,15 @@
     });
     return instance;
 }
+- (instancetype)init{
+    if (self = [super init]) {
+        [NetworkStatusHelper startMonitorNetworkStatus:^(AFNetworkReachabilityStatus status) {
+            
+        }];
+    }
+    return self;
+}
+
 /**
  下载文件
  */
@@ -40,6 +49,7 @@
                                                      delegateQueue:[NSOperationQueue mainQueue]];
     NSURLSessionDownloadTask *downloadtask = [session downloadTaskWithRequest:reqDownload];
     [downloadtask resume];
+    _isDownloading = YES;
 }
 //  上行数据进度信息再次获取
 - (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didSendBodyData:(int64_t)bytesSent totalBytesSent:(int64_t)totalBytesSent totalBytesExpectedToSend:(int64_t)totalBytesExpectedToSend
@@ -65,6 +75,7 @@
     }else{
         NSLog(@"下载完成，移动文件至目的文件夹 %@ 成功",_path);
     }
+    _isDownloading = NO;
 }
 //  断点下载在此处实现
 - (void)URLSession:(NSURLSession *)session downloadTask:(NSURLSessionDownloadTask *)downloadTask didResumeAtOffset:(int64_t)fileOffset expectedTotalBytes:(int64_t)expectedTotalBytes
@@ -79,6 +90,9 @@
     _downloadProgress = per;
     
     NSLog(@"下行进度:%3.1f%%   下行网速:%5.1f kbps",per * 100,(float)packageLength/1024);
+    _isDownloading = YES;
 }
+
+
 
 @end

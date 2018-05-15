@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5E02AA4D20A442B300995635 /* HttpHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E02AA4C20A442B300995635 /* HttpHelper.m */; };
+		50B30CBA20AA776700706029 /* HttpHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B30CB920AA776700706029 /* HttpHelper.m */; };
+		50B30CBD20AA802400706029 /* NetworkStatusHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B30CBC20AA802400706029 /* NetworkStatusHelper.m */; };
 		5E02AA5020A442CE00995635 /* DownloadHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E02AA4F20A442CE00995635 /* DownloadHelper.m */; };
 		5E02AA5420A44B7000995635 /* FileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E02AA5320A44B7000995635 /* FileManager.m */; };
 		5E031BB120A582DE00CD322E /* UIColor+ADSAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E031BB020A582DE00CD322E /* UIColor+ADSAdd.m */; };
@@ -49,8 +50,10 @@
 
 /* Begin PBXFileReference section */
 		29E8EE8FB9978EAD31F93110 /* Pods-OnlinePlayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnlinePlayer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OnlinePlayer/Pods-OnlinePlayer.debug.xcconfig"; sourceTree = "<group>"; };
-		5E02AA4B20A442B300995635 /* HttpHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HttpHelper.h; sourceTree = "<group>"; };
-		5E02AA4C20A442B300995635 /* HttpHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HttpHelper.m; sourceTree = "<group>"; };
+		50B30CB820AA776700706029 /* HttpHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HttpHelper.h; sourceTree = "<group>"; };
+		50B30CB920AA776700706029 /* HttpHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HttpHelper.m; sourceTree = "<group>"; };
+		50B30CBB20AA802400706029 /* NetworkStatusHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkStatusHelper.h; sourceTree = "<group>"; };
+		50B30CBC20AA802400706029 /* NetworkStatusHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkStatusHelper.m; sourceTree = "<group>"; };
 		5E02AA4E20A442CE00995635 /* DownloadHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DownloadHelper.h; sourceTree = "<group>"; };
 		5E02AA4F20A442CE00995635 /* DownloadHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DownloadHelper.m; sourceTree = "<group>"; };
 		5E02AA5220A44B7000995635 /* FileManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FileManager.h; sourceTree = "<group>"; };
@@ -143,12 +146,14 @@
 		5E02AA4720A4424A00995635 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				5E02AA4B20A442B300995635 /* HttpHelper.h */,
-				5E02AA4C20A442B300995635 /* HttpHelper.m */,
 				5E02AA4E20A442CE00995635 /* DownloadHelper.h */,
 				5E02AA4F20A442CE00995635 /* DownloadHelper.m */,
 				5E66FC5C20A9883300D2C976 /* IPAddressUtil.h */,
 				5E66FC5D20A9883300D2C976 /* IPAddressUtil.m */,
+				50B30CB820AA776700706029 /* HttpHelper.h */,
+				50B30CB920AA776700706029 /* HttpHelper.m */,
+				50B30CBB20AA802400706029 /* NetworkStatusHelper.h */,
+				50B30CBC20AA802400706029 /* NetworkStatusHelper.m */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -469,9 +474,10 @@
 				5E74480B20A3D6C3007F52F4 /* UIView+POPAnimation.m in Sources */,
 				5E74480920A3D6C3007F52F4 /* UIFont+Fonts.m in Sources */,
 				5E74481720A3FA0A007F52F4 /* HomeViewController.m in Sources */,
+				50B30CBD20AA802400706029 /* NetworkStatusHelper.m in Sources */,
 				5E7447DF20A3057A007F52F4 /* main.m in Sources */,
-				5E02AA4D20A442B300995635 /* HttpHelper.m in Sources */,
 				5E74480720A3D6C3007F52F4 /* NSString+ADS.m in Sources */,
+				50B30CBA20AA776700706029 /* HttpHelper.m in Sources */,
 				5E7447D120A30570007F52F4 /* AppDelegate.m in Sources */,
 				5E7447EC20A3D6A0007F52F4 /* GCDManager.m in Sources */,
 				5E7447E820A30762007F52F4 /* OnlineVideoPlayer.m in Sources */,
@@ -610,6 +616,10 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/OnlinePlayer/PrefixHeader.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"COCOAPODS=1",
+					"$(inherited)",
+				);
 				INFOPLIST_FILE = OnlinePlayer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -637,6 +647,11 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/OnlinePlayer/PrefixHeader.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=0",
+					"COCOAPODS=1",
+					"$(inherited)",
+				);
 				INFOPLIST_FILE = OnlinePlayer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (

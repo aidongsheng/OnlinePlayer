@@ -23,8 +23,12 @@
 #define SYSTEM_VERSION_LESS_THAN(v)                 ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedAscending)
 #define SYSTEM_VERSION_LESS_THAN_OR_EQUAL_TO(v)     ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedDescending)
 
-#define Funcname(objc,func)   (objc.func)
+#define VISIBLE_VIEW   [UIApplication sharedApplication].keyWindow.visibleViewController.view
 
-#define Funcname(objc,func)   @(((objc.func),#func))
+#if DEBUG
+#define BASE_URL   @"123"
+#else
+#define BASE_URL   @"456"
+#endif
 
 #endif /* OnlinePlayerMacro_h */

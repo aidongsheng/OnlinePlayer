@@ -20,36 +20,38 @@ typedef void(^ChangeColor)(UIColor *bgColor);
 
 
 #define videoURL        @"http://192.168.101.199:8000/download/bilibili.mp4"
-#define swoVideoURL     @"http://resbj.swochina.com/video/bb601b829bb22bece99dc037323bbed2.mp4"
+#define swoVideoURL     @"http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"
 static NSString * const identifier = @"video_cell_id";
 @implementation HomeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.view addSubview:self.videoListView];
-    [[DownloadHelper shareInstance] downloadFileWithURL:swoVideoURL toPath:@"/videos"];
+//    [self.view addSubview:self.videoListView];
+    [[DownloadHelper shareInstance] downloadFileWithURL:swoVideoURL toPath:@"/video时尚s"];
+//
+//    //启动合成会话
+//    NSString *txtPath = [[NSBundle mainBundle] pathForResource:@"tangshi300" ofType:@"txt"];
+//    if ([[NSFileManager defaultManager] fileExistsAtPath:txtPath]) {
+//        NSError *error = nil;
+//        NSStringEncoding encoding;
+//        NSString *contentOfTxt = [[NSString alloc]initWithContentsOfFile:txtPath usedEncoding:&encoding error:&error];
+//        NSString *testSizeFilePath = [[FileManager documentDirectory] stringByAppendingPathComponent:@"video/fa4600bd3bda9f2eca398bd8601b49c0.mp4"];
+//        unsigned long long fileSize = [FileManager getFileSize:testSizeFilePath];
+//        NSLog(@"文件 %@ 大小为:%llu",testSizeFilePath,fileSize);
+//        [AudioHelper readText:contentOfTxt byWho:vixk];
+//
+//        if (error) {
+//            NSLog(@"读取文件错误");
+//        }else{
+//            NSLog(@"编码格式 %lu",encoding); //如utf-8编码的会得到4
+//        }
+//    }else{
+//        NSLog(@"文件不存在");
+//    }
+    HttpHelper *helper = [[HttpHelper alloc]init];
     
-    //启动合成会话
-    NSString *txtPath = [[NSBundle mainBundle] pathForResource:@"tangshi300" ofType:@"txt"];
-    if ([[NSFileManager defaultManager] fileExistsAtPath:txtPath]) {
-        NSError *error = nil;
-        NSStringEncoding encoding;
-        NSString *contentOfTxt = [[NSString alloc]initWithContentsOfFile:txtPath usedEncoding:&encoding error:&error];
-        NSString *testSizeFilePath = [[FileManager documentDirectory] stringByAppendingPathComponent:@"video/fa4600bd3bda9f2eca398bd8601b49c0.mp4"];
-        unsigned long long fileSize = [FileManager getFileSize:testSizeFilePath];
-        NSLog(@"文件 %@ 大小为:%llu",testSizeFilePath,fileSize);
-        [AudioHelper readText:contentOfTxt byWho:vixk];
-        
-        if (error) {
-            NSLog(@"读取文件错误");
-        }else{
-            NSLog(@"编码格式 %lu",encoding); //如utf-8编码的会得到4
-        }
-    }else{
-        NSLog(@"文件不存在");
-    }
-    
-    NSLog(@"IP地址:%@",[IPAddressUtil getIPAddress]);
+    NSLog(@"http helper:%@",[helper baseUrl]);
+    NSLog(@"IP地址:%@",[IPAddressUtil getCellIPAddress]);
 }
 
 - (UITableView *)videoListView

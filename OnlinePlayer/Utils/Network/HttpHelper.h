@@ -2,13 +2,12 @@
 //  HttpHelper.h
 //  OnlinePlayer
 //
-//  Created by wcc on 2018/5/10.
+//  Created by josan on 2018/5/15.
 //  Copyright © 2018年 aidongsheng. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "YTKRequest.h"
 
-@interface HttpHelper : NSObject
-
+@interface HttpHelper : YTKRequest
 
 @end

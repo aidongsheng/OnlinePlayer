@@ -16,6 +16,7 @@ PODS:
     - AFNetworking/NSURLSession
   - KVOController (1.2.0)
   - Masonry (1.1.0)
+  - MBProgressHUD (1.1.0)
   - MGJRouter (0.9.3)
   - pop (1.0.10)
   - SDWebImage (4.3.3):
@@ -31,6 +32,7 @@ PODS:
 DEPENDENCIES:
   - KVOController
   - Masonry
+  - MBProgressHUD
   - MGJRouter
   - pop
   - SDWebImage
@@ -43,6 +45,7 @@ SPEC REPOS:
     - AFNetworking
     - KVOController
     - Masonry
+    - MBProgressHUD
     - MGJRouter
     - pop
     - SDWebImage
@@ -54,6 +57,7 @@ SPEC CHECKSUMS:
   AFNetworking: 8ac6017b94ea105479f7776e5288e48ae9c59bb4
   KVOController: d72ace34afea42468329623b3379ab3cd1d286b6
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
   MGJRouter: f65821e2aeffc8f9e84b254c8f1c0dd80f048aa9
   pop: 82ca6b068ce9278fd350fd9dd09482a0ce9492e6
   SDWebImage: de4d90b5bff3571eae7bd16202b1f43135409fa5
@@ -61,6 +65,6 @@ SPEC CHECKSUMS:
   YTKNetwork: df8a7a5597bda1664a4efaa7ef871a818a887fe0
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: b7f6b52c440f62d400290ad8fc4541ed00524990
+PODFILE CHECKSUM: bed54b955d1bd013915f561b904e342e5f7f281d
 
 COCOAPODS: 1.5.0
