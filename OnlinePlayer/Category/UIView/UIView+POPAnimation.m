@@ -16,30 +16,12 @@
 @implementation UIView (POPAnimation)
 
 /***    pop 动画 key 值    ***/
-#define wccScaleXYAnimationKey          @"wccScaleXYAnimationKey"
-#define wccScaleXAnimationKey           @"wccScaleXAnimationKey"
-#define wccScaleYAnimationKey           @"wccScaleYAnimationKey"
-#define wccRotationXYAnimationKey       @"wccRotationXYAnimationKey"
-#define wccRotationXAnimationKey        @"wccRotationXAnimationKey"
-#define wccRotationYAnimationKey        @"wccRotationYAnimationKey"
-#define wccViewCenterAnimationKey          @"wccViewCenterAnimationKey"
-#define wccViewBackgroundColorKey       @"wccViewBackgroundColorKey"
 #define wccCountDownAnimationKey        @"wccCountDownAnimationKey"
-#define wccFrameAnimationKey            @"wccFrameAnimationKey"
-#define wccSizeAnimationKey             @"wccSizeAnimationKey"
-#define wccAlphaAnimationKey            @"wccAlphaAnimationKey"
-#define wccTranslationXYAnimationKey    @"wccTranslationXYAnimationKey"
-#define wccPositionAnimationXKey        @"wccPositionAnimationXKey"
-#define wccCornerRadiusAnimationKey     @"wccCornerRadiusAnimationKey"
-#define wccLabelTextColorAnimationKey      @"wccLabelTextColorAnimationKey"
-#define wccTableViewAnimationWithContentOffset  @"wccTableViewAnimationWithContentOffset"
-#define wccBorderBlinkAnimationKey      @"wccBorderBlinkAnimationKey"
-#define wccShakeAnimationWithOffsetKey  @"ShakeAnimationWithOffsetKey"
 
 - (void)wcc_addScaleXYAnimation:(CGFloat)scale duration:(CGFloat)duration autoReverse:(BOOL)reverse
 {
-    [self.layer pop_removeAnimationForKey:wccScaleXYAnimationKey];
     POPSpringAnimation *scaleAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerScaleXY];
+    scaleAnimation.delegate = self;
     scaleAnimation.toValue = [NSValue valueWithCGSize:CGSizeMake(scale, scale)];
     scaleAnimation.autoreverses = reverse;
     scaleAnimation.springBounciness = 100;
@@ -47,82 +29,87 @@
     scaleAnimation.dynamicsMass = 2;
     scaleAnimation.dynamicsFriction = 15;
     scaleAnimation.dynamicsTension = 200;
-    [self.layer pop_addAnimation:scaleAnimation forKey:wccScaleXYAnimationKey];
-//
-//    [self.layer pop_removeAnimationForKey:@"kPOPLayerScaleXxY"];
-//    POPBasicAnimation *scaleAnim = [POPBasicAnimation animationWithPropertyNamed:kPOPLayerScaleXY];
-//    scaleAnim.autoreverses = reverse;
-//    scaleAnim.toValue = @(scale);
-//    scaleAnim.duration = duration;
-//    [self.layer pop_addAnimation:scaleAnim forKey:@"kPOPLayerScaleXxY"];
+    scaleAnimation.completionBlock = ^(POPAnimation *anim, BOOL finished) {
+        if (finished) {
+            [self.layer pop_removeAnimationForKey:kPOPLayerScaleXY];
+        }
+    };
+    [self.layer pop_addAnimation:scaleAnimation forKey:kPOPLayerScaleXY];
 }
 
 - (void)wcc_addScaleXAnimation:(CGFloat)scale duration:(CGFloat)duration autoReverse:(BOOL)reverse
 {
-    [self.layer pop_removeAnimationForKey:wccScaleXAnimationKey];
+    [self.layer pop_removeAnimationForKey:kPOPViewScaleX];
     POPBasicAnimation *scaleXAnimation = [POPBasicAnimation animationWithPropertyNamed:kPOPViewScaleX];
-    scaleXAnimation.toValue = [NSValue valueWithCGSize:CGSizeMake(scale, scale)];
+    scaleXAnimation.toValue = [NSValue valueWithCGSize:CGSizeMake(scale, 1)];
     scaleXAnimation.duration = duration;
     scaleXAnimation.autoreverses = reverse;
-    [self pop_addAnimation:scaleXAnimation forKey:wccScaleXAnimationKey];
+    [self pop_addAnimation:scaleXAnimation forKey:kPOPViewScaleX];
 }
 
 - (void)wcc_addScaleYAnimation:(CGFloat)scale duration:(CGFloat)duration autoReverse:(BOOL)reverse
 {
-    [self.layer pop_removeAnimationForKey:wccScaleYAnimationKey];
-    POPBasicAnimation *scaleYAnimation = [POPBasicAnimation animationWithPropertyNamed:kPOPViewScaleX];
-    scaleYAnimation.toValue = [NSValue valueWithCGSize:CGSizeMake(scale, scale)];
+    [self.layer pop_removeAnimationForKey:kPOPViewScaleY];
+    POPBasicAnimation *scaleYAnimation = [POPBasicAnimation animationWithPropertyNamed:kPOPViewScaleY];
+    scaleYAnimation.toValue = [NSValue valueWithCGSize:CGSizeMake(1, scale)];
     scaleYAnimation.duration = duration;
     scaleYAnimation.autoreverses = reverse;
-    [self pop_addAnimation:scaleYAnimation forKey:wccScaleYAnimationKey];
+    [self pop_addAnimation:scaleYAnimation forKey:kPOPViewScaleY];
 }
 
 - (void)wcc_addRotationXYAnimation:(CGFloat)rotation duration:(CGFloat)duration autoReverse:(BOOL)reverse
 {
-    [self.layer pop_removeAnimationForKey:wccRotationXYAnimationKey];
+    [self.layer pop_removeAnimationForKey:kPOPLayerRotation];
     POPBasicAnimation *rotationAnimation = [POPBasicAnimation animationWithPropertyNamed:kPOPLayerRotation];
     rotationAnimation.toValue = @(rotation);
     rotationAnimation.duration = duration;
     rotationAnimation.autoreverses = reverse;
-    [self.layer pop_addAnimation:rotationAnimation forKey:wccRotationXYAnimationKey];
+    [self.layer pop_addAnimation:rotationAnimation forKey:kPOPLayerRotation];
 }
 - (void)wcc_addRotationXAnimation:(CGFloat)rotation duration:(CGFloat)duration autoReverse:(BOOL)reverse
 {
-    [self.layer pop_removeAnimationForKey:wccRotationXAnimationKey];
-    POPBasicAnimation *rotationAnimation = [POPBasicAnimation animationWithPropertyNamed:kPOPLayerRotation];
+    [self.layer pop_removeAnimationForKey:kPOPLayerRotationX];
+    POPBasicAnimation *rotationAnimation = [POPBasicAnimation animationWithPropertyNamed:kPOPLayerRotationX];
+    rotationAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
     rotationAnimation.toValue = @(rotation);
     rotationAnimation.duration = duration;
     rotationAnimation.autoreverses = reverse;
-    [self.layer pop_addAnimation:rotationAnimation forKey:wccRotationXAnimationKey];
+    [self.layer pop_addAnimation:rotationAnimation forKey:kPOPLayerRotationX];
 }
 - (void)wcc_addRotationYAnimation:(CGFloat)rotation duration:(CGFloat)duration autoReverse:(BOOL)reverse
 {
-    [self.layer pop_removeAnimationForKey:wccRotationYAnimationKey];
+    
+    [self.layer pop_removeAnimationForKey:kPOPLayerRotationY];
     POPBasicAnimation *rotationAnimation = [POPBasicAnimation animationWithPropertyNamed:kPOPLayerRotationY];
     rotationAnimation.toValue = @(rotation);
     rotationAnimation.duration = duration;
     rotationAnimation.autoreverses = reverse;
-    [self.layer pop_addAnimation:rotationAnimation forKey:wccRotationYAnimationKey];
+    rotationAnimation.completionBlock = ^(POPAnimation *anim, BOOL finished) {
+        if (finished) {
+            [self.layer pop_removeAnimationForKey:kPOPLayerRotationY];
+        }
+    };
+    [self.layer pop_addAnimation:rotationAnimation forKey:kPOPLayerRotationY];
 }
 - (void)wcc_addViewCenterAnimation:(CGPoint)point duration:(CGFloat)duration autoReverse:(BOOL)reverse
 {
     
-    [self pop_removeAnimationForKey:wccViewCenterAnimationKey];
+    [self pop_removeAnimationForKey:kPOPViewCenter];
     POPBasicAnimation *centerAnim = [POPBasicAnimation animationWithPropertyNamed:kPOPViewCenter];
     centerAnim.toValue = [NSValue valueWithCGPoint:CGPointMake(point.x - self.frame.size.width/2, point.y - self.frame.size.height/2)];
     centerAnim.duration = duration;
     centerAnim.autoreverses = reverse;
-    [self pop_addAnimation:centerAnim forKey:wccViewCenterAnimationKey];
+    [self pop_addAnimation:centerAnim forKey:kPOPViewCenter];
 }
 
 - (void)wcc_addBackgroundColorAnimation:(UIColor *)backgroundColor duration:(CGFloat)duration autoReverse:(BOOL)reverse
 {
-    [self.layer pop_removeAnimationForKey:wccViewBackgroundColorKey];
+    [self.layer pop_removeAnimationForKey:kPOPLayerBackgroundColor];
     POPBasicAnimation * backgroundColorAnim = [POPBasicAnimation animationWithPropertyNamed:kPOPLayerBackgroundColor];
     backgroundColorAnim.toValue = backgroundColor;
     backgroundColorAnim.duration = duration;
     backgroundColorAnim.autoreverses = reverse;
-    [self.layer pop_addAnimation:backgroundColorAnim forKey:wccViewBackgroundColorKey];
+    [self.layer pop_addAnimation:backgroundColorAnim forKey:kPOPLayerBackgroundColor];
 }
 
 - (void)wcc_addCountDownAnimation:(CGFloat)destValue duration:(CGFloat)duration autoReverse:(BOOL)reverse simulateType:(wccCountType)type
@@ -157,7 +144,7 @@
 
 - (void)wcc_addFrameAnimation:(CGRect)frame duration:(CGFloat)duration autoReverse:(BOOL)reverse
 {
-    [self pop_removeAnimationForKey:wccFrameAnimationKey];
+    [self pop_removeAnimationForKey:kPOPViewFrame];
     POPBasicAnimation *frameAnim = [POPBasicAnimation animationWithPropertyNamed:kPOPViewFrame];
     frameAnim.toValue = [NSValue valueWithCGRect:frame];
     frameAnim.duration = duration;
@@ -165,71 +152,71 @@
     CAMediaTimingFunction * func = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
     frameAnim.timingFunction = func;
     frameAnim.delegate = self;
-    [self pop_addAnimation:frameAnim forKey:wccFrameAnimationKey];
+    [self pop_addAnimation:frameAnim forKey:kPOPViewFrame];
 }
 
 - (void)wcc_addSizeAnimation:(CGSize)size
 {
-    [self pop_removeAnimationForKey:wccSizeAnimationKey];
+    [self pop_removeAnimationForKey:kPOPViewSize];
     POPSpringAnimation *sizeAnim = [POPSpringAnimation animationWithPropertyNamed:kPOPViewSize];
     sizeAnim.velocity = [NSValue valueWithCGSize:size];
-    [self pop_addAnimation:sizeAnim forKey:wccSizeAnimationKey];
+    [self pop_addAnimation:sizeAnim forKey:kPOPViewSize];
 }
 
 - (void)wcc_addAlphaAnimation:(CGFloat)alpha duration:(CGFloat)duration autoReverse:(BOOL)reverse
 {
-    [self.layer pop_removeAnimationForKey:wccAlphaAnimationKey];
+    [self.layer pop_removeAnimationForKey:kPOPLayerOpacity];
     POPBasicAnimation *alphaAnim = [POPBasicAnimation animationWithPropertyNamed:kPOPLayerOpacity];
     alphaAnim.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
     alphaAnim.toValue = @(alpha);
     alphaAnim.duration = duration;
     alphaAnim.autoreverses = reverse;
-    [self.layer pop_addAnimation:alphaAnim forKey:wccAlphaAnimationKey];
+    [self.layer pop_addAnimation:alphaAnim forKey:kPOPLayerOpacity];
 }
 
 - (void)wcc_addTranslationXYAnimation:(CGPoint)point duration:(CGFloat)duration autoReverse:(BOOL)reverse
 {
-    [self pop_removeAnimationForKey:wccTranslationXYAnimationKey];
+    [self pop_removeAnimationForKey:kPOPLayerTranslationXY];
     POPBasicAnimation *translationXYAnim = [POPBasicAnimation animationWithPropertyNamed:kPOPLayerTranslationXY];
     translationXYAnim.toValue = [NSValue valueWithCGPoint:point];
     translationXYAnim.duration = duration;
     translationXYAnim.autoreverses = reverse;
-    [self.layer pop_addAnimation:translationXYAnim forKey:wccTranslationXYAnimationKey];
+    [self.layer pop_addAnimation:translationXYAnim forKey:kPOPLayerTranslationXY];
 }
 
 - (void)wcc_addPositionXAnimation
 {
-    [self.layer pop_removeAnimationForKey:wccPositionAnimationXKey];
+    [self.layer pop_removeAnimationForKey:kPOPLayerPositionX];
     POPSpringAnimation *positionXAnim = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerPositionX];
     positionXAnim.springBounciness = 10;
     positionXAnim.dynamicsTension = 1000;
     positionXAnim.dynamicsFriction = 10;
     positionXAnim.velocity = @50;
-    [self.layer pop_addAnimation:positionXAnim forKey:wccPositionAnimationXKey];
+    [self.layer pop_addAnimation:positionXAnim forKey:kPOPLayerPositionX];
 }
 
 
 - (void)wcc_addCornerRadiusAnimation
 {
-    [self.layer pop_removeAnimationForKey:wccCornerRadiusAnimationKey];
+    [self.layer pop_removeAnimationForKey:kPOPLayerCornerRadius];
     POPSpringAnimation * cornerRadius = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerCornerRadius];
     cornerRadius.fromValue = @0;
     cornerRadius.velocity = @1;
     CGFloat maxSize = self.frame.size.height > self.frame.size.width ? self.frame.size.width : self.frame.size.height;
     cornerRadius.toValue = @(maxSize/2);
     cornerRadius.springBounciness = 22.0f;
-    [self.layer pop_addAnimation:cornerRadius forKey:wccCornerRadiusAnimationKey];
+    [self.layer pop_addAnimation:cornerRadius forKey:kPOPLayerCornerRadius];
 }
 
 - (void)wcc_addLabelTextColorAnimation:(UIColor *)labelTextColor duration:(CGFloat)duration autoReverse:(BOOL)reverse
 {
-    [self pop_removeAnimationForKey:wccLabelTextColorAnimationKey];
+    [self pop_removeAnimationForKey:kPOPLabelTextColor];
     if ([self isKindOfClass:[UILabel class]]) {
         POPBasicAnimation * labelTextColorAnimation = [POPBasicAnimation animationWithPropertyNamed:kPOPLabelTextColor];
         labelTextColorAnimation.duration = duration;
         labelTextColorAnimation.autoreverses = reverse;
         labelTextColorAnimation.toValue = labelTextColor;
-        [self pop_addAnimation:labelTextColorAnimation forKey:wccLabelTextColorAnimationKey];
+        [self pop_addAnimation:labelTextColorAnimation forKey:kPOPLabelTextColor];
     }else{
         NSLog(@"此视图非 UILabel，不可添加 UILabel 文字颜色动画");
     }
@@ -238,15 +225,15 @@
 
 - (void)wcc_addTableViewAnimationWithContentOffset:(CGPoint)contentOffset
 {
-    [self pop_removeAnimationForKey:wccTableViewAnimationWithContentOffset];
+    [self pop_removeAnimationForKey:kPOPTableViewContentOffset];
     POPSpringAnimation * tableViewOffsetAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPTableViewContentOffset];
     tableViewOffsetAnimation.toValue = [NSValue valueWithCGPoint:contentOffset];
-    [self pop_addAnimation:tableViewOffsetAnimation forKey:wccTableViewAnimationWithContentOffset];
+    [self pop_addAnimation:tableViewOffsetAnimation forKey:kPOPTableViewContentOffset];
 }
 
 - (void)wcc_addBorderBlinkAnimation:(UIColor *)color duration:(CGFloat)duration autoReverse:(BOOL)reverse
 {
-    [self.layer pop_removeAnimationForKey:wccBorderBlinkAnimationKey];
+    [self.layer pop_removeAnimationForKey:kPOPLayerBorderColor];
     POPBasicAnimation * BlinkAnimation = [POPBasicAnimation animationWithPropertyNamed:kPOPLayerBorderColor];
     self.layer.borderWidth = 1;
     BlinkAnimation.duration = duration;
@@ -258,12 +245,12 @@
             self.layer.borderColor = [UIColor clearColor].CGColor;
         }
     };
-    [self.layer pop_addAnimation:BlinkAnimation forKey:wccBorderBlinkAnimationKey];
+    [self.layer pop_addAnimation:BlinkAnimation forKey:kPOPLayerBorderColor];
 }
 
 - (void)wcc_addShakeAnimationWithOffset:(CGFloat)offset
 {
-    [self.layer pop_removeAnimationForKey:wccShakeAnimationWithOffsetKey];
+    [self.layer pop_removeAnimationForKey:kPOPLayerTranslationX];
     POPSpringAnimation * shakeAnimationTranslationX = [POPSpringAnimation animationWithCustomPropertyNamed:kPOPLayerTranslationX readBlock:^(id obj, CGFloat *values) {
         
     } writeBlock:^(id obj, const CGFloat *values) {
@@ -277,8 +264,7 @@
     shakeAnimationTranslationX.dynamicsTension = 10000;
     shakeAnimationTranslationX.dynamicsMass = 20;
     shakeAnimationTranslationX.dynamicsFriction = 100;
-    [self.layer pop_addAnimation:shakeAnimationTranslationX forKey:wccShakeAnimationWithOffsetKey];
+    [self.layer pop_addAnimation:shakeAnimationTranslationX forKey:kPOPLayerTranslationX];
 }
-
 
 @end

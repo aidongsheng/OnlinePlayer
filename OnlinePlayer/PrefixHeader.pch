@@ -25,7 +25,7 @@
 #import "AudioHelper.h"
 #import "UIView+Additions.h"
 #import <objc/runtime.h>
-
+#import <POP.h>
 #import <FBShimmering.h>
 #import <Masonry.h>
 #import <YYKit.h>

@@ -110,5 +110,7 @@ typedef NS_ENUM(NSUInteger, AlertType) {
     }
     [hud showAnimated:YES];
     [hud hideAnimated:YES afterDelay:1];
+    
+    
 }
 @end

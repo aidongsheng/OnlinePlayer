@@ -28,7 +28,7 @@
     _window.frame = [UIScreen mainScreen].bounds;
     HomeViewController *homeVC = [[HomeViewController alloc]init];
     _window.rootViewController = homeVC;
-    homeVC.view.backgroundColor = [UIColor orangeColor];
+    homeVC.view.backgroundColor = [UIColor clearColor];
     [_window makeKeyAndVisible];
     return YES;
 }
