@@ -13,6 +13,7 @@
 		5E02AA5420A44B7000995635 /* FileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E02AA5320A44B7000995635 /* FileManager.m */; };
 		5E031BB120A582DE00CD322E /* UIColor+ADSAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E031BB020A582DE00CD322E /* UIColor+ADSAdd.m */; };
 		5E30257920ABC97B007056A0 /* UIShapeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E30257820ABC97B007056A0 /* UIShapeView.m */; };
+		5E30257D20AC189F007056A0 /* FPSTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E30257C20AC189E007056A0 /* FPSTool.m */; };
 		5E66FC3820A9607300D2C976 /* iflyMSC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E66FC3720A9607200D2C976 /* iflyMSC.framework */; };
 		5E66FC3A20A960A100D2C976 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E66FC3920A960A100D2C976 /* libz.tbd */; };
 		5E66FC3C20A960A700D2C976 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E66FC3B20A960A700D2C976 /* AVFoundation.framework */; };
@@ -63,6 +64,8 @@
 		5E031BB020A582DE00CD322E /* UIColor+ADSAdd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ADSAdd.m"; sourceTree = "<group>"; };
 		5E30257720ABC97B007056A0 /* UIShapeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIShapeView.h; sourceTree = "<group>"; };
 		5E30257820ABC97B007056A0 /* UIShapeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIShapeView.m; sourceTree = "<group>"; };
+		5E30257B20AC189E007056A0 /* FPSTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPSTool.h; sourceTree = "<group>"; };
+		5E30257C20AC189E007056A0 /* FPSTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPSTool.m; sourceTree = "<group>"; };
 		5E66FC3720A9607200D2C976 /* iflyMSC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = iflyMSC.framework; sourceTree = "<group>"; };
 		5E66FC3920A960A100D2C976 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		5E66FC3B20A960A700D2C976 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -188,6 +191,15 @@
 			path = Shape;
 			sourceTree = "<group>";
 		};
+		5E30257A20AC188F007056A0 /* FPS */ = {
+			isa = PBXGroup;
+			children = (
+				5E30257B20AC189E007056A0 /* FPSTool.h */,
+				5E30257C20AC189E007056A0 /* FPSTool.m */,
+			);
+			path = FPS;
+			sourceTree = "<group>";
+		};
 		5E66FC5520A9614F00D2C976 /* Audio */ = {
 			isa = PBXGroup;
 			children = (
@@ -254,6 +266,7 @@
 		5E7447E920A3D68B007F52F4 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				5E30257A20AC188F007056A0 /* FPS */,
 				5E30257620ABC961007056A0 /* Shape */,
 				5E66FC5520A9614F00D2C976 /* Audio */,
 				5E02AA5120A44B4300995635 /* File */,
@@ -480,6 +493,7 @@
 			files = (
 				5E74480C20A3D6C3007F52F4 /* UIViewController+DefaultView.m in Sources */,
 				5E74480520A3D6C3007F52F4 /* NSDictionary+ADSCategory.m in Sources */,
+				5E30257D20AC189F007056A0 /* FPSTool.m in Sources */,
 				5E30257920ABC97B007056A0 /* UIShapeView.m in Sources */,
 				5E74480620A3D6C3007F52F4 /* NSObject+GetClassProperty.m in Sources */,
 				5E66FC5E20A9883300D2C976 /* IPAddressUtil.m in Sources */,

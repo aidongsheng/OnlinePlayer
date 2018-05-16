@@ -14,6 +14,7 @@ typedef NS_ENUM(NSUInteger, ShapeType) {
     ShapeTypeTriangle,  //  三角形
     ShapeTypeRectangle, //  四边形
     ShapeTypePolygon,   //  多边形
+    ShapeTypeIndicator, //  旋转提示符
 };
 
 @interface UIShapeView : UIView

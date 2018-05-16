@@ -21,6 +21,7 @@
 #import "UIColor+ADSAdd.h"
 #import "GCDManager.h"
 #import "IPAddressUtil.h"
+#import "FPSTool.h"
 #import "HttpHelper.h"
 #import "AudioHelper.h"
 #import "UIView+Additions.h"

@@ -10,4 +10,5 @@
 
 @interface UIColor (ADSAdd)
 + (UIColor *)colorWithHex:(NSString *)hex;
++ (UIColor *)randomColor;
 @end

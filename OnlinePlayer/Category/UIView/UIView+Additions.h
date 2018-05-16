@@ -50,4 +50,6 @@
  @param msg 提示字符串
  */
 - (void)showMsg:(NSString *)msg;
+
+- (void)drawCorner;
 @end

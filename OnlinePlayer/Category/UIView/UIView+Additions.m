@@ -110,7 +110,16 @@ typedef NS_ENUM(NSUInteger, AlertType) {
     }
     [hud showAnimated:YES];
     [hud hideAnimated:YES afterDelay:1];
-    
-    
+}
+
+- (void)drawCorner
+{
+    CGFloat radius = self.width > self.height ? self.height/2 : self.width/2;
+    UIBezierPath *circle = [UIBezierPath bezierPathWithArcCenter:self.center radius:radius startAngle:0 endAngle:M_PI * 2 clockwise:YES];
+    CAShapeLayer *shapeLayer = [[CAShapeLayer alloc]init];
+    shapeLayer.fillColor = [UIColor orangeColor].CGColor;
+    shapeLayer.fillMode = kCAFillModeBoth;
+    shapeLayer.path = circle.CGPath;
+    [self.layer addSublayer:shapeLayer];
 }
 @end

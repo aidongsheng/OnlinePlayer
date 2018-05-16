@@ -37,4 +37,9 @@
         return nil;
     }
 }
++ (UIColor *)randomColor
+{
+    NSInteger maxRGB = [@"FFFFFF" hexToInt];
+    return [UIColor colorWithRGB:arc4random()%maxRGB];
+}
 @end
