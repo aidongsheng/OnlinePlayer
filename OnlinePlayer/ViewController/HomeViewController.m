@@ -19,7 +19,8 @@
     [super viewDidLoad];
     
     UIButton * button = [[UIButton alloc]initWithEventBlock:^(UIButton *button) {
-        [self showLoadingView];
+//        [self showLoadingView];
+        [self showNetworkErrorView];
         [button drawCorner];
     }];
     [button setTitle:@"click me!" forState:UIControlStateNormal];
@@ -35,11 +36,7 @@
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
     [super touchesBegan:touches withEvent:event];
-    [self.view showSuccessMsg:@"操作成功"];
-    [_circle wcc_addRotationXAnimation:M_PI * 20 duration:5 autoReverse:NO];
-    [_rectangle wcc_addRotationXYAnimation:M_PI * 8000 duration:50 autoReverse:YES];
-    [_oval wcc_addScaleXYAnimation:M_PI * 2 duration:5 autoReverse:YES];
-    [[FPSTool shareInstance] showFPSInfomation];
+    [[DownloadHelper shareInstance]downloadFileWithURL:@"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAp0lEQVQoU3WPUQ3CQBBEZxQADkABOOCmBggKQEKlIAEcVEG3OKgDcAAoWHKXu6Zp2knuY2fezuaIiczsHi1J13HE8WBmWwCv7O0kvUs+BRsApxw2ks4DmE8dAcS2OcXWjhm8LEDFfqTTbdv2JPdzsLs/q6oKCTSzNYDPQutG0nf4jJn5HCgpMaUxxOJouPsvBeQqL0pSV8CDu3ckbwDii6rdvSYZJPV/KRI9xFS/jDcAAAAASUVORK5CYII=" toPath:@"/jiushi/ak"];
 }
 
 @end

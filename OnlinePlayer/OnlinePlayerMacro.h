@@ -30,4 +30,6 @@
 #define BASE_URL   @"456"
 #endif
 
+#define RandomColor [UIColor randomColor]
+
 #endif /* OnlinePlayerMacro_h */

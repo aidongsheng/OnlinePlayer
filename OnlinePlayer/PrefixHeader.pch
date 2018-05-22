@@ -25,6 +25,8 @@
 #import "HttpHelper.h"
 #import "AudioHelper.h"
 #import "UIView+Additions.h"
+#import "UILabel+ADSAdd.h"
+
 #import <objc/runtime.h>
 #import <POP.h>
 #import <FBShimmering.h>
@@ -39,5 +41,6 @@
 #import "DownloadHelper.h"
 #import "NetworkStatusHelper.h"
 #import <iflyMSC/iflyMSC.h>
+#import <QMUIKit.h>
 
 #endif /* PrefixHeader_pch */

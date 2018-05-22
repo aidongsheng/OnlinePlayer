@@ -12,6 +12,7 @@
 		5E02AA5020A442CE00995635 /* DownloadHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E02AA4F20A442CE00995635 /* DownloadHelper.m */; };
 		5E02AA5420A44B7000995635 /* FileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E02AA5320A44B7000995635 /* FileManager.m */; };
 		5E031BB120A582DE00CD322E /* UIColor+ADSAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E031BB020A582DE00CD322E /* UIColor+ADSAdd.m */; };
+		5E19ABFD20B2982700D0A766 /* UILabel+ADSAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E19ABFC20B2982700D0A766 /* UILabel+ADSAdd.m */; };
 		5E30257920ABC97B007056A0 /* UIShapeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E30257820ABC97B007056A0 /* UIShapeView.m */; };
 		5E30257D20AC189F007056A0 /* FPSTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E30257C20AC189E007056A0 /* FPSTool.m */; };
 		5E66FC3820A9607300D2C976 /* iflyMSC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E66FC3720A9607200D2C976 /* iflyMSC.framework */; };
@@ -62,6 +63,8 @@
 		5E02AA5320A44B7000995635 /* FileManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FileManager.m; sourceTree = "<group>"; };
 		5E031BAF20A582DE00CD322E /* UIColor+ADSAdd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+ADSAdd.h"; sourceTree = "<group>"; };
 		5E031BB020A582DE00CD322E /* UIColor+ADSAdd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ADSAdd.m"; sourceTree = "<group>"; };
+		5E19ABFB20B2982700D0A766 /* UILabel+ADSAdd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+ADSAdd.h"; sourceTree = "<group>"; };
+		5E19ABFC20B2982700D0A766 /* UILabel+ADSAdd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+ADSAdd.m"; sourceTree = "<group>"; };
 		5E30257720ABC97B007056A0 /* UIShapeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIShapeView.h; sourceTree = "<group>"; };
 		5E30257820ABC97B007056A0 /* UIShapeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIShapeView.m; sourceTree = "<group>"; };
 		5E30257B20AC189E007056A0 /* FPSTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPSTool.h; sourceTree = "<group>"; };
@@ -182,6 +185,15 @@
 			path = UIColor;
 			sourceTree = "<group>";
 		};
+		5E19ABFA20B2980300D0A766 /* UILabel */ = {
+			isa = PBXGroup;
+			children = (
+				5E19ABFB20B2982700D0A766 /* UILabel+ADSAdd.h */,
+				5E19ABFC20B2982700D0A766 /* UILabel+ADSAdd.m */,
+			);
+			path = UILabel;
+			sourceTree = "<group>";
+		};
 		5E30257620ABC961007056A0 /* Shape */ = {
 			isa = PBXGroup;
 			children = (
@@ -280,6 +292,7 @@
 		5E7447ED20A3D6C3007F52F4 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				5E19ABFA20B2980300D0A766 /* UILabel */,
 				5E031BAE20A582B900CD322E /* UIColor */,
 				5E7447EE20A3D6C3007F52F4 /* NSDictionary */,
 				5E7447F120A3D6C3007F52F4 /* NSObject */,
@@ -411,6 +424,7 @@
 				5E7447C820A30570007F52F4 /* Sources */,
 				5E7447C920A30570007F52F4 /* Frameworks */,
 				5E7447CA20A30570007F52F4 /* Resources */,
+				81E7FD0E2B281E1917743F6E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -466,6 +480,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		81E7FD0E2B281E1917743F6E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-OnlinePlayer/Pods-OnlinePlayer-resources.sh",
+				"${PODS_ROOT}/QMUIKit/QMUIKit/QMUIResources/QMUIResources.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/QMUIResources.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OnlinePlayer/Pods-OnlinePlayer-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		9DEFC711952AD05D0D1BC3BA /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -504,6 +536,7 @@
 				5E74481720A3FA0A007F52F4 /* HomeViewController.m in Sources */,
 				50B30CBD20AA802400706029 /* NetworkStatusHelper.m in Sources */,
 				5E7447DF20A3057A007F52F4 /* main.m in Sources */,
+				5E19ABFD20B2982700D0A766 /* UILabel+ADSAdd.m in Sources */,
 				5E74480720A3D6C3007F52F4 /* NSString+ADS.m in Sources */,
 				50B30CBA20AA776700706029 /* HttpHelper.m in Sources */,
 				5E7447D120A30570007F52F4 /* AppDelegate.m in Sources */,

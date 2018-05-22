@@ -122,4 +122,6 @@ typedef NS_ENUM(NSUInteger, AlertType) {
     shapeLayer.path = circle.CGPath;
     [self.layer addSublayer:shapeLayer];
 }
+
+
 @end

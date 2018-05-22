@@ -8,4 +8,5 @@ target 'OnlinePlayer' do
     pod 'Shimmer', :inhibit_warnings => true
     pod 'MGJRouter',:inhibit_warnings => true
     pod 'MBProgressHUD',:inhibit_warnings => true
+    pod 'QMUIKit',:inhibit_warnings => true
 end
