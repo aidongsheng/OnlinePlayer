@@ -13,8 +13,17 @@
 		5E02AA5420A44B7000995635 /* FileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E02AA5320A44B7000995635 /* FileManager.m */; };
 		5E031BB120A582DE00CD322E /* UIColor+ADSAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E031BB020A582DE00CD322E /* UIColor+ADSAdd.m */; };
 		5E19ABFD20B2982700D0A766 /* UILabel+ADSAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E19ABFC20B2982700D0A766 /* UILabel+ADSAdd.m */; };
+		5E1A4EC120B7AABF004170E1 /* Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E1A4EBE20B7AABF004170E1 /* Base64.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		5E30257920ABC97B007056A0 /* UIShapeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E30257820ABC97B007056A0 /* UIShapeView.m */; };
 		5E30257D20AC189F007056A0 /* FPSTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E30257C20AC189E007056A0 /* FPSTool.m */; };
+		5E53D10A20BEB89200233A3E /* ImageProcess.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E53D0FB20BEB89100233A3E /* ImageProcess.m */; };
+		5E53D10B20BEB89200233A3E /* WCCCaptureBarcodeReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E53D0FE20BEB89100233A3E /* WCCCaptureBarcodeReader.m */; };
+		5E53D10C20BEB89200233A3E /* WCCCaptureCSReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E53D0FF20BEB89100233A3E /* WCCCaptureCSReader.m */; };
+		5E53D10D20BEB89200233A3E /* WCCCapture.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E53D10020BEB89100233A3E /* WCCCapture.m */; };
+		5E53D10E20BEB89200233A3E /* UIImage+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E53D10120BEB89200233A3E /* UIImage+Additions.m */; };
+		5E53D10F20BEB89200233A3E /* WCCCaptureReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E53D10220BEB89200233A3E /* WCCCaptureReader.m */; };
+		5E53D11020BEB89200233A3E /* WCCCaptureCartReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E53D10720BEB89200233A3E /* WCCCaptureCartReader.m */; };
+		5E5E5D6820B6C45B00831CC5 /* MainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E5E5D6720B6C45B00831CC5 /* MainModel.m */; };
 		5E66FC3820A9607300D2C976 /* iflyMSC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E66FC3720A9607200D2C976 /* iflyMSC.framework */; };
 		5E66FC3A20A960A100D2C976 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E66FC3920A960A100D2C976 /* libz.tbd */; };
 		5E66FC3C20A960A700D2C976 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E66FC3B20A960A700D2C976 /* AVFoundation.framework */; };
@@ -65,10 +74,31 @@
 		5E031BB020A582DE00CD322E /* UIColor+ADSAdd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ADSAdd.m"; sourceTree = "<group>"; };
 		5E19ABFB20B2982700D0A766 /* UILabel+ADSAdd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+ADSAdd.h"; sourceTree = "<group>"; };
 		5E19ABFC20B2982700D0A766 /* UILabel+ADSAdd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+ADSAdd.m"; sourceTree = "<group>"; };
+		5E1A4EBE20B7AABF004170E1 /* Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Base64.m; sourceTree = "<group>"; };
+		5E1A4EBF20B7AABF004170E1 /* Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64.h; sourceTree = "<group>"; };
+		5E1A4EC020B7AABF004170E1 /* Base64Defines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64Defines.h; sourceTree = "<group>"; };
+		5E1A4EC220B7AF07004170E1 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 		5E30257720ABC97B007056A0 /* UIShapeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIShapeView.h; sourceTree = "<group>"; };
 		5E30257820ABC97B007056A0 /* UIShapeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIShapeView.m; sourceTree = "<group>"; };
 		5E30257B20AC189E007056A0 /* FPSTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPSTool.h; sourceTree = "<group>"; };
 		5E30257C20AC189E007056A0 /* FPSTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPSTool.m; sourceTree = "<group>"; };
+		5E53D0FB20BEB89100233A3E /* ImageProcess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageProcess.m; sourceTree = "<group>"; };
+		5E53D0FC20BEB89100233A3E /* ImageProcess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageProcess.h; sourceTree = "<group>"; };
+		5E53D0FD20BEB89100233A3E /* WCCCaptureBarcodeReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCCCaptureBarcodeReader.h; sourceTree = "<group>"; };
+		5E53D0FE20BEB89100233A3E /* WCCCaptureBarcodeReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCCCaptureBarcodeReader.m; sourceTree = "<group>"; };
+		5E53D0FF20BEB89100233A3E /* WCCCaptureCSReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCCCaptureCSReader.m; sourceTree = "<group>"; };
+		5E53D10020BEB89100233A3E /* WCCCapture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCCCapture.m; sourceTree = "<group>"; };
+		5E53D10120BEB89200233A3E /* UIImage+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Additions.m"; sourceTree = "<group>"; };
+		5E53D10220BEB89200233A3E /* WCCCaptureReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCCCaptureReader.m; sourceTree = "<group>"; };
+		5E53D10320BEB89200233A3E /* WCCCaptureReaderDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCCCaptureReaderDelegate.h; sourceTree = "<group>"; };
+		5E53D10420BEB89200233A3E /* WCCCaptureReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCCCaptureReader.h; sourceTree = "<group>"; };
+		5E53D10520BEB89200233A3E /* WCCCapture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCCCapture.h; sourceTree = "<group>"; };
+		5E53D10620BEB89200233A3E /* WCCCaptureCSReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCCCaptureCSReader.h; sourceTree = "<group>"; };
+		5E53D10720BEB89200233A3E /* WCCCaptureCartReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCCCaptureCartReader.m; sourceTree = "<group>"; };
+		5E53D10820BEB89200233A3E /* WCCCaptureCartReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCCCaptureCartReader.h; sourceTree = "<group>"; };
+		5E53D10920BEB89200233A3E /* UIImage+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Additions.h"; sourceTree = "<group>"; };
+		5E5E5D6620B6C45B00831CC5 /* MainModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainModel.h; sourceTree = "<group>"; };
+		5E5E5D6720B6C45B00831CC5 /* MainModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainModel.m; sourceTree = "<group>"; };
 		5E66FC3720A9607200D2C976 /* iflyMSC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = iflyMSC.framework; sourceTree = "<group>"; };
 		5E66FC3920A960A100D2C976 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		5E66FC3B20A960A700D2C976 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -194,6 +224,25 @@
 			path = UILabel;
 			sourceTree = "<group>";
 		};
+		5E1A4EBD20B7AAA5004170E1 /* Encrypt */ = {
+			isa = PBXGroup;
+			children = (
+				5E1A4EBF20B7AABF004170E1 /* Base64.h */,
+				5E1A4EBE20B7AABF004170E1 /* Base64.m */,
+				5E1A4EC020B7AABF004170E1 /* Base64Defines.h */,
+			);
+			path = Encrypt;
+			sourceTree = "<group>";
+		};
+		5E1A4ED620B7BBFA004170E1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5E5E5D6620B6C45B00831CC5 /* MainModel.h */,
+				5E5E5D6720B6C45B00831CC5 /* MainModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		5E30257620ABC961007056A0 /* Shape */ = {
 			isa = PBXGroup;
 			children = (
@@ -210,6 +259,28 @@
 				5E30257C20AC189E007056A0 /* FPSTool.m */,
 			);
 			path = FPS;
+			sourceTree = "<group>";
+		};
+		5E5E5D5E20B69A0C00831CC5 /* Capture */ = {
+			isa = PBXGroup;
+			children = (
+				5E53D0FC20BEB89100233A3E /* ImageProcess.h */,
+				5E53D0FB20BEB89100233A3E /* ImageProcess.m */,
+				5E53D10920BEB89200233A3E /* UIImage+Additions.h */,
+				5E53D10120BEB89200233A3E /* UIImage+Additions.m */,
+				5E53D10520BEB89200233A3E /* WCCCapture.h */,
+				5E53D10020BEB89100233A3E /* WCCCapture.m */,
+				5E53D0FD20BEB89100233A3E /* WCCCaptureBarcodeReader.h */,
+				5E53D0FE20BEB89100233A3E /* WCCCaptureBarcodeReader.m */,
+				5E53D10820BEB89200233A3E /* WCCCaptureCartReader.h */,
+				5E53D10720BEB89200233A3E /* WCCCaptureCartReader.m */,
+				5E53D10620BEB89200233A3E /* WCCCaptureCSReader.h */,
+				5E53D0FF20BEB89100233A3E /* WCCCaptureCSReader.m */,
+				5E53D10420BEB89200233A3E /* WCCCaptureReader.h */,
+				5E53D10220BEB89200233A3E /* WCCCaptureReader.m */,
+				5E53D10320BEB89200233A3E /* WCCCaptureReaderDelegate.h */,
+			);
+			path = Capture;
 			sourceTree = "<group>";
 		};
 		5E66FC5520A9614F00D2C976 /* Audio */ = {
@@ -250,6 +321,7 @@
 		5E7447CE20A30570007F52F4 /* OnlinePlayer */ = {
 			isa = PBXGroup;
 			children = (
+				5E1A4ED620B7BBFA004170E1 /* Model */,
 				5E66FC5920A965CF00D2C976 /* Resource */,
 				5E74481420A3F9E3007F52F4 /* ViewController */,
 				5E7447ED20A3D6C3007F52F4 /* Category */,
@@ -278,6 +350,8 @@
 		5E7447E920A3D68B007F52F4 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				5E1A4EBD20B7AAA5004170E1 /* Encrypt */,
+				5E5E5D5E20B69A0C00831CC5 /* Capture */,
 				5E30257A20AC188F007056A0 /* FPS */,
 				5E30257620ABC961007056A0 /* Shape */,
 				5E66FC5520A9614F00D2C976 /* Audio */,
@@ -384,6 +458,7 @@
 		A996A2D44ECF6FACF5F161B2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5E1A4EC220B7AF07004170E1 /* libstdc++.tbd */,
 				5E66FC5320A960F700D2C976 /* libicucore.tbd */,
 				5E66FC5120A960F000D2C976 /* libc++.tbd */,
 				5E66FC4F20A960E900D2C976 /* CoreGraphics.framework */,
@@ -527,16 +602,23 @@
 				5E74480520A3D6C3007F52F4 /* NSDictionary+ADSCategory.m in Sources */,
 				5E30257D20AC189F007056A0 /* FPSTool.m in Sources */,
 				5E30257920ABC97B007056A0 /* UIShapeView.m in Sources */,
+				5E53D10B20BEB89200233A3E /* WCCCaptureBarcodeReader.m in Sources */,
+				5E53D10E20BEB89200233A3E /* UIImage+Additions.m in Sources */,
 				5E74480620A3D6C3007F52F4 /* NSObject+GetClassProperty.m in Sources */,
 				5E66FC5E20A9883300D2C976 /* IPAddressUtil.m in Sources */,
 				5E66FC5820A961A200D2C976 /* AudioHelper.m in Sources */,
 				5E02AA5020A442CE00995635 /* DownloadHelper.m in Sources */,
 				5E74480B20A3D6C3007F52F4 /* UIView+POPAnimation.m in Sources */,
+				5E53D10D20BEB89200233A3E /* WCCCapture.m in Sources */,
+				5E53D10C20BEB89200233A3E /* WCCCaptureCSReader.m in Sources */,
+				5E53D11020BEB89200233A3E /* WCCCaptureCartReader.m in Sources */,
 				5E74480920A3D6C3007F52F4 /* UIFont+Fonts.m in Sources */,
 				5E74481720A3FA0A007F52F4 /* HomeViewController.m in Sources */,
 				50B30CBD20AA802400706029 /* NetworkStatusHelper.m in Sources */,
 				5E7447DF20A3057A007F52F4 /* main.m in Sources */,
+				5E53D10F20BEB89200233A3E /* WCCCaptureReader.m in Sources */,
 				5E19ABFD20B2982700D0A766 /* UILabel+ADSAdd.m in Sources */,
+				5E5E5D6820B6C45B00831CC5 /* MainModel.m in Sources */,
 				5E74480720A3D6C3007F52F4 /* NSString+ADS.m in Sources */,
 				50B30CBA20AA776700706029 /* HttpHelper.m in Sources */,
 				5E7447D120A30570007F52F4 /* AppDelegate.m in Sources */,
@@ -544,7 +626,9 @@
 				5E7447E820A30762007F52F4 /* OnlineVideoPlayer.m in Sources */,
 				5E74480820A3D6C3007F52F4 /* UIButton+ADSAdd.m in Sources */,
 				5E031BB120A582DE00CD322E /* UIColor+ADSAdd.m in Sources */,
+				5E53D10A20BEB89200233A3E /* ImageProcess.m in Sources */,
 				5E02AA5420A44B7000995635 /* FileManager.m in Sources */,
+				5E1A4EC120B7AABF004170E1 /* Base64.m in Sources */,
 				5E74480A20A3D6C3007F52F4 /* UIView+BlurView.m in Sources */,
 				5E74481220A3F27C007F52F4 /* UIView+Additions.m in Sources */,
 			);
@@ -682,15 +766,67 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = OnlinePlayer/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"AFNetworking\"",
+					"-l\"KVOController\"",
+					"-l\"MBProgressHUD\"",
+					"-l\"MGJRouter\"",
+					"-l\"Masonry\"",
+					"-l\"QMUIKit\"",
+					"-l\"SDWebImage\"",
+					"-l\"Shimmer\"",
+					"-l\"YTKNetwork\"",
+					"-l\"YYKit\"",
+					"-l\"c++\"",
+					"-l\"pop\"",
+					"-l\"sqlite3\"",
+					"-l\"z\"",
+					"-framework",
+					"\"Accelerate\"",
+					"-framework",
+					"\"AssetsLibrary\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"CoreFoundation\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreImage\"",
+					"-framework",
+					"\"CoreText\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"Photos\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-framework",
+					"\"WebP\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dongsheng.OnlinePlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "";
+				VALID_ARCHS = "armv7 armv7s arm64";
 			};
 			name = Debug;
 		};
@@ -714,15 +850,67 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = OnlinePlayer/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"AFNetworking\"",
+					"-l\"KVOController\"",
+					"-l\"MBProgressHUD\"",
+					"-l\"MGJRouter\"",
+					"-l\"Masonry\"",
+					"-l\"QMUIKit\"",
+					"-l\"SDWebImage\"",
+					"-l\"Shimmer\"",
+					"-l\"YTKNetwork\"",
+					"-l\"YYKit\"",
+					"-l\"c++\"",
+					"-l\"pop\"",
+					"-l\"sqlite3\"",
+					"-l\"z\"",
+					"-framework",
+					"\"Accelerate\"",
+					"-framework",
+					"\"AssetsLibrary\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"CoreFoundation\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreImage\"",
+					"-framework",
+					"\"CoreText\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"Photos\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-framework",
+					"\"WebP\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dongsheng.OnlinePlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "";
+				VALID_ARCHS = "armv7 armv7s arm64";
 			};
 			name = Release;
 		};

@@ -90,6 +90,8 @@
     _downloadProgress = per;
     
     NSLog(@"下行进度:%3.1f%%   下行网速:%5.1f kbps",per * 100,(float)packageLength/1024);
+    NSDictionary *asd;
+    [asd modelDescription];
     _isDownloading = YES;
 }
 
